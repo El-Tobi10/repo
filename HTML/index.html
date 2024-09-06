@@ -7,34 +7,77 @@
     <meta property="og:title" content="Inicio - BlackPearlStream">
     <meta name="description" content="Inicio de BlackPearlStream donde podrás ver todas las películas y series gratis en BlackPearlStream">
     <meta property="og:description" content="Inicio de BlackPearlStream donde podrás ver todas las películas y series gratis en BlackPearlStream">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.blackpearlstream.com/Inicio">
+    <!--Favicon-->
     <link rel="icon" href="/img/Barco_pirata.png" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="/img/Barco_pirata.png" sizes="16x16" type="image/x-icon">
-    
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Css-->
+    <link rel="stylesheet" href="/CSS/header_footer.css">
+    <link rel="stylesheet" href="/CSS/index.css">
 </head>
 <body>
     <!--  Header  -->
     <header>
-        <nav>
-            <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-                <li><a href="#">Peliculas</a></li>
-                <li><a href="#">Series</a></li>
-                <li><a href="#" class="shorts">Shorts</a></li>
-            </ul>
-        </nav>
-        <a href="index.html"><img src="/img/Barco_pirata.png" alt="logo pirata, barco, barco pirata" height="70px" width="70px" title="Logo BlackPearlStream"></a>
-        <input type="search" name="busqueda">
-        <button type="button">Ingresar</button>
+            <nav>
+                <ul>
+                    <li><a class="selected" href="#">Inicio</a></li>
+                    <li><a class="op" href="#">Peliculas</a></li>
+                    <li><a class="op"  href="#">Series</a></li>
+                    <li><a href="#" class="shorts">Shorts</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/img/Barco_pirata.png" alt="logo pirata, barco, barco pirata, Logo BlackPearlStream" height="100px" max-width="100px" title="Logo BlackPearlStream">
+                </a>
+            </div>
+            <div class="search">
+                <input type="search" name="busqueda" placeholder="Buscar">
+                <button type="button">Iniciar sesion</button>
+            </div>
     </header>
     <!--     Main      -->
-    <!-- Imagenes Compañias-->
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+    </label>
+    <!-- Gallery -->
     <div class="gallery">
-        <ul class="conteiner">
-            <li class="card"><a href="#"><img src="" alt=""></a></li>
-            <li class="card"><a href="#"><img src="" alt=""></a></li>
-            <li class="card"><a href="#"><img src="" alt=""></a></li>
-            <li class="card"><a href="#"><img src="" alt=""></a></li>
-            <li class="card"><a href="#"><img src="" alt=""></a></li>
+        <ul class="contenedor">
+            <li class="card">
+                <a role="link" href="#" tabindex="0">
+                    <video autoplay muted loop class="Video" playsinline data-testid="brand-set-video"><source src="https://vod-bgc-sa-east-1.media.dssott.com/bgui/ps01/disney/bgui/2019/08/07/1565217865-disney.mp4" type="video/mp4" data-testid="brand-set-video-source"></video>
+                    <img src="/img/disney.svg" alt="logo Disney, disney">
+                </a>
+            </li>
+            <li class="card">
+                <a role="link" href="#" tabindex="0">
+                    <video autoplay muted loop class="Video hp" playsinline data-testid="brand-set-video"><source src="/videos/HP.mp4" type="video/mp4" data-testid="brand-set-video-source"></video>
+                    <img src="/img/HarryPotter.svg" alt="logo harry potter, harry potter">
+                </a>
+            </li>
+            <li class="card">
+                <a role="link" href="#" tabindex="0">
+                    <video autoplay muted loop class="Video" playsinline data-testid="brand-set-video"><source src="https://vod-bgc-sa-east-1.media.dssott.com/bgui/ps01/disney/bgui/2019/08/07/1565217799-marvel.mp4" type="video/mp4" data-testid="brand-set-video-source"></video>
+                    <img src="/img/Marvel_Logo.svg" alt="logo marvel, marvel">
+                </a>
+            </li>
+            <li class="card">
+                <a role="link" href="#" tabindex="0">
+                    <video autoplay muted loop class="Video" playsinline data-testid="brand-set-video"><source src="/videos/DC.mp4" type="video/mp4" data-testid="brand-set-video-source"></video>
+                    <img src="/img/DC_Comics_logo.svg" alt="logo dc comics, dc comics, dc">
+
+                </a>
+            </li>
+            <li class="card">
+                <a role="link" href="#" tabindex="0">
+                    <video autoplay muted loop class="Video" playsinline data-testid="brand-set-video"><source src="/videos/GOT.mp4" type="video/mp4" data-testid="brand-set-video-source"></video>
+                    <img src="/img/hbo.svg" alt="logo hbo, hbo, hbo max">
+                </a>
+            </li>
         </ul>
     </div>
     <!--  Generos   -->
@@ -42,9 +85,18 @@
         <h3>Generos</h3>
     </aside>
     <!-- Contenido Principal -->
-    <section>
-    </section>
+    <main>
+        <h2>Ultimos lanzamientos</h2>
+    </main>
     <!--  Footer  -->
-    <footer></footer>
+    <footer>
+        <a class="op" href="https://cuevana.biz/terminos-y-condiciones">Terminos y condiciones</a>
+        <a href=""><img src="" alt=""></a>
+        <span>© 2024 BlackPearlStream Peliculas Online, Todos los derechos reservados.</span>       
+        <a href="#"><img src="" alt=""></a>
+        <a href="#"><img src="" alt=""></a>
+        <a href="#"><img src="" alt=""></a>
+    </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
