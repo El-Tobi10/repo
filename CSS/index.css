@@ -1,52 +1,77 @@
 /*  Gallery  */
+.gallery {
+    display: block;
+    max-width: 90%;
+    margin: 3em;
+}
 .contenedor{
     width: 100%;
-    max-width: 1800px;
+    max-width: auto;
     height: 500px;
     display: flex;
     justify-content: center;
-    align-items: stretch;
     flex-wrap: wrap;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
     transition: all 400ms;
 }
-.contenedor .card{
+.card{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0,
+    0.5);
+    flex-wrap: wrap;
     flex: 1;
     height: 80%;
     transition: all 400ms;
     cursor: pointer;
     justify-content: space-around;
     align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.from {
+    background-image: url('/repo/img/juegos/img_card/eldenring.jpg');
+}
+
+.ubi {
+    background-image: url('/repo/img/juegos/img_card/Rainbow.jpg');
+}
+
+.rock {
+    background-image: url('/repo/img/juegos/img_card/gta6.png');
+}
+
+.beth {
+    background-image: url('/repo/img/juegos/img_card/doom.webp');
+}
+
+.dog {
+    background-image: url('/repo/img/juegos/img_card/TLOF.jpeg');
+}
+
 .contenedor .card img{
     width: 120px;
     height: 100px;
-}
-.contenedor .card img .hp{
-    filter:contrast(#fff);
-}
-.card .Video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    background-color: #fff;
-    background-size: cover;
-}
-.card .Video:hover {
-    transform: scale(1.1);
-    transition: transform 400ms;
-}
-.card:hover{
-    flex: 3;
-    filter: none;
-    z-index: 0;
-    margin-top: 15px;
+    object-fit: contain;
+    aspect-ratio: 3/4;
+    overflow: auto;
 }
 
+.card:hover{
+    flex: 3;
+    filter: grayscale(0%);
+    z-index: 0;
+    -webkit-box-shadow:24px 24px 14px 13px rgba(42, 58, 58, 0.5);
+    -moz-box-shadow: 24px 24px 14px 13px rgba(42, 58, 58, 0.5);
+    box-shadow: 24px 24px 14px 13px rgba(42, 58, 58, 0.5);
+}
+.card:hover img{
+    transform: translateY(8em);
+    transition: 400ms;
+    }
 .card:not(hover) {
     filter: grayscale(100%);
 }

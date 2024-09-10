@@ -20,22 +20,22 @@
 </head>
 <body>
     <!--  Header  -->
-    <header>
+    <header class="header sticky-top">
             <nav>
                 <ul>
-                    <li><a class="selected" href="#">Inicio</a></li>
+                    <li><a class="op" href="/repo/PHP/index.php">Inicio</a></li>
                     <li><a class="op" href="#">Peliculas</a></li>
                     <li><a class="op"  href="#">Series</a></li>
-                    <li><a href="#" class="shorts">Shorts</a></li>
+                    <li><a class="shorts" href="#">Shorts</a></li>
                 </ul>
             </nav>
             <div class="logo">
-                <a href="index.html">
-                    <img src="#" alt="" height="100px" max-width="100px" title="Logo BestGamer">
+                <a href="/repo/PHP/index.php">
+                    <img src="/repo/img/logoJoystick.png" alt="" height="100px" max-width="100px" title="Logo BestGamer">
                 </a>
             </div>
             <div class="search">
                 <input type="search" name="busqueda" placeholder="Buscar">
-                <button type="button">Iniciar sesion</button>
+                <a href="/repo/PHP/login.php"><button type="button">Iniciar sesion</button></a>
             </div>
     </header>

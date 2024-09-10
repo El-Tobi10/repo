@@ -1,7 +1,7 @@
 <footer>
-        <a class="op" href="https://cuevana.biz/terminos-y-condiciones">Terminos y condiciones</a>
+        <a href="https://cuevana.biz/terminos-y-condiciones">Terminos y condiciones</a>
         <a href=""><img src="" alt=""></a>
-        <span>© 2024 BlackPearlStream Peliculas Online, Todos los derechos reservados.</span>       
+        <span>Copyright © 2024 BestGamer.</span>       
         <a href="#"><img src="" alt=""></a>
         <a href="#"><img src="" alt=""></a>
         <a href="#"><img src="" alt=""></a>
