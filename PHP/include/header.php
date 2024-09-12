@@ -20,22 +20,53 @@
 </head>
 <body>
     <!--  Header  -->
-    <header class="header sticky-top">
-            <nav>
+    <header class="header sticky-top" data-bs-theme="dark">
+            <nav class="navbar navbar-expand-sm navbar-dark">
                 <ul>
-                    <li><a class="op" href="/repo/PHP/index.php">Inicio</a></li>
-                    <li><a class="op" href="#">Peliculas</a></li>
-                    <li><a class="op"  href="#">Series</a></li>
-                    <li><a class="shorts" href="#">Shorts</a></li>
+                    <li><a class="nav-item op" href="/repo/PHP/index.php">Inicio</a></li>
+                    <div class="nav-item dropdown op">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Plataformas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">PC</a></li>
+                            <li><a class="dropdown-item" href="#">PS4</a></li>
+                            <li><a class="dropdown-item" href="#">PS5</a></li>
+                            <li><a class="dropdown-item" href="#">Xbox One</a></li>
+                            <li><a class="dropdown-item" href="#">Xbox Series X</a></li>
+                            <li><a class="dropdown-item" href="#">Switch</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item dropdown op">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Generos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">2D</a></li>
+                            <li><a class="dropdown-item" href="#">Accion</a></li>
+                            <li><a class="dropdown-item" href="#">Aventura</a></li>
+                            <li><a class="dropdown-item" href="#">Carreras</a></li>
+                            <li><a class="dropdown-item" href="#">Deportes</a></li>
+                            <li><a class="dropdown-item" href="#">Estrategia</a></li>
+                            <li><a class="dropdown-item" href="#">Shooter</a></li>
+                            <li><a class="dropdown-item" href="#">Guerra</a></li>
+                            <li><a class="dropdown-item" href="#">Lucha</a></li>
+                            <li><a class="dropdown-item" href="#">Multijugador</a></li>
+                            <li><a class="dropdown-item" href="#">Mundo Abierto</a></li>
+                            <li><a class="dropdown-item" href="#">Rol</a></li>
+                            <li><a class="dropdown-item" href="#">Simulacion</a></li>
+                            <li><a class="dropdown-item" href="#">Supervivencia</a></li>
+                            <li><a class="dropdown-item" href="#">Terror</a></li>
+                        </ul>
+                    </div>
                 </ul>
-            </nav>
-            <div class="logo">
-                <a href="/repo/PHP/index.php">
-                    <img src="/repo/img/logoJoystick.png" alt="" height="100px" max-width="100px" title="Logo BestGamer">
+                <a href="/repo/PHP/index.php" class="logo navbar-brand">
+                    <img src="/repo/img/logo.jpg" alt="" height="100px" max-width="100px" title="Logo BestGamer">
                 </a>
-            </div>
-            <div class="search">
-                <input type="search" name="busqueda" placeholder="Buscar">
-                <a href="/repo/PHP/login.php"><button type="button">Iniciar sesion</button></a>
-            </div>
+                <div class="search">
+                    <input type="search" name="busqueda" placeholder="Buscar">
+                    <button class="btn btn-outline-success text-white" type="submit">Search</button>
+                    <a href="/repo/PHP/login.php"><button type="button">Iniciar sesion</button></a>
+                </div>
+            </nav>
     </header>

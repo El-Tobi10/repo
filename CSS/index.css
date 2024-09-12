@@ -15,7 +15,8 @@
     gap: 1rem;
     transition: all 400ms;
 }
-.card{
+.cartas{
+    list-style: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -52,7 +53,7 @@
     background-image: url('/repo/img/juegos/img_card/TLOF.jpeg');
 }
 
-.contenedor .card img{
+.contenedor .cartas img{
     width: 120px;
     height: 100px;
     object-fit: contain;
@@ -60,7 +61,7 @@
     overflow: auto;
 }
 
-.card:hover{
+.cartas:hover{
     flex: 3;
     filter: grayscale(0%);
     z-index: 0;
@@ -68,10 +69,25 @@
     -moz-box-shadow: 24px 24px 14px 13px rgba(42, 58, 58, 0.5);
     box-shadow: 24px 24px 14px 13px rgba(42, 58, 58, 0.5);
 }
-.card:hover img{
+.cartas:hover img{
     transform: translateY(8em);
     transition: 400ms;
     }
-.card:not(hover) {
+.cartas:not(hover) {
     filter: grayscale(100%);
+}
+
+/*  Grid de Juegos */
+.juegos{
+    margin: 5% 7%;
+}
+.juego{
+    background-color: #196273;
+    color: #FFFFFF;
+}
+.juego:hover{
+    -webkit-box-shadow:24px 24px 14px 13px rgba(29, 80, 80, 0.5);
+    -moz-box-shadow: 24px 24px 14px 13px rgba(29, 80, 80, 0.5);
+    box-shadow: 24px 24px 14px 13px rgba(29, 80, 80, 0.5);
+    transition: 300ms;
 }

@@ -2,13 +2,13 @@
 <title>Login - BestGamer</title>
 <div class="text-white">
   <h2 class="text-center">Iniciar Sesion</h2>
-  <form class="m-4">
+  <form class="mx-5">
     <div class="sm-10 row ">
-      <label for="exampleInputEmail1" class="form-label">Ingrese su Email o Username</label>
+      <label for="exampleInputEmail1" class="form-label">Ingrese su Email o Usuario</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com">
     </div>
     <div class="sm-10 row">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
       <input type="password" class="form-control" id="exampleInputPassword1">
     </div>
     <button type="submit" class="btn btn-primary mt-3">Aceptar</button>
