@@ -21,7 +21,7 @@
 <body>
     <!--  Header  -->
     <header class="header sticky-top" data-bs-theme="dark">
-            <nav class="navbar navbar-expand-sm navbar-dark">
+            <nav class="navbar navbar-expand-sm navbar-dark flex-column flex-sm-row">
                 <ul>
                     <li><a class="nav-item op" href="/repo/PHP/index.php">Inicio</a></li>
                     <div class="nav-item dropdown op">

@@ -79,7 +79,8 @@
 
 /*  Grid de Juegos */
 .juegos{
-    margin: 5% 7%;
+    margin: 2% 7% 3%;
+
 }
 .juego{
     background-color: #196273;
@@ -90,4 +91,21 @@
     -moz-box-shadow: 24px 24px 14px 13px rgba(29, 80, 80, 0.5);
     box-shadow: 24px 24px 14px 13px rgba(29, 80, 80, 0.5);
     transition: 300ms;
+}
+.col{
+    margin-bottom: 2%;
+}
+
+/* Preguntas y respuestas */
+.accordion{
+    max-width: 70%;
+    margin: 5% auto;
+}
+.accordion-button{
+    background-color: #196273;
+    color: #FFFFFF;
+}
+.accordion-body{
+    background-color: #1B3940;
+    color: #FFFFFF;
 }

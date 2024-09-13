@@ -32,11 +32,12 @@
     </ul>
 </div>
 
-<hr class="border border-secundary border-3 opacity-75">
+<hr class="border border-secundary border-2 opacity-75 mx-3">
 <!-- Contenido Principal -->
 <main>
-    <div class="row row-cols-1 row-cols-md-4 g-5 juegos">
-        <div class="col ">
+    <div class="container"><h2>Los Juegos Mas Populares:</h2></div>
+    <div class="row row-cols-1 row-cols-md-4 juegos">
+        <div class="col">
             <div class="card juego">
                 <a href="/repo/PHP/Juegos/gtaV.php">
                     <img src="/repo/img/juegos/gtav/gtaV.jpg" class="card-img-top" alt="...">
@@ -48,7 +49,47 @@
         </div>
         <div class="col">
             <div class="card juego">
+                <a href="/repo/PHP/Juegos/skyrim.php">
+                    <img src="/repo/img/juegos/skyrim/Skyrim.jpg" class="card-img-top" alt="...">  
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">The Elder Scrolls V: Skyrim</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card juego">
                 <a href="">
+                    <img src="/repo/img/juegos/RDR2/RDR2.jpg" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Red Dead Redemption 2</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card juego">
+                <a href="">
+                    <img src="/repo/img/juegos/Borderlands2/Borderlands2.jpg" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Borderlands 2</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card juego">
+                <a href="/repo/PHP/Juegos/gtaV.php">
+                    <img src="/repo/img/juegos/gtav/gtaV.jpg" class="card-img-top" alt="...">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Grand Theft Auto V</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card juego">
+                <a href="/repo/PHP/Juegos/skyrim.php">
                     <img src="/repo/img/juegos/skyrim/Skyrim.jpg" class="card-img-top" alt="...">  
                 </a>
                 <div class="card-body">
@@ -77,5 +118,37 @@
             </div>
         </div>
     </div>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    ¿Quienes somos?
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Accordion Item #2
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"></div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"></div>
+            </div>
+        </div>
+        </div>
 </main>
 <?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
