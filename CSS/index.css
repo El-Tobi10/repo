@@ -96,6 +96,13 @@
     margin-bottom: 2%;
 }
 
+.boton{
+    border: solid 3px;
+}
+.boton:hover{
+    color: #1c788d;
+}
+
 /* Preguntas y respuestas */
 .accordion{
     max-width: 70%;
