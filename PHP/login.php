@@ -11,10 +11,12 @@
       <label for="exampleInputPassword1" class="form-label">Contraseña</label>
       <input type="password" name="txtpass" class="form-control" id="exampleInputPassword1">
     </div>
-    <button type="submit" class="btn btn-primary mt-3">Aceptar</button>
+    <button type="submit" id="submitButton" class="btn btn-primary mt-3">Aceptar</button>
     <button type="reset" class="btn btn-secondary mt-3">Cancelar</button>
   </form>
   <div class="text-center mb-3 ">Si no tienes cuenta puedes registrarte aqui <a href="/repo/PHP/register.php"><kbd>Regístrarte</kbd></a></div>
 </div>
 
 <?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<script src="../JS/storage.js"></script>
+

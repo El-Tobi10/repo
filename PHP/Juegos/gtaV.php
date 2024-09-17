@@ -216,5 +216,5 @@
     </div>
 </div>
 
-<script src="/repo/JS/stars.js"></script>
+
 <?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
