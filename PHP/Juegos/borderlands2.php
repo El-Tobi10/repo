@@ -1,21 +1,21 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
 
-<title>Grand Theft Auto V - BestGamer</title>
+<title>Borderlands 2 - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
-<h1 class="text-center text-white">Grand Theft Auto V | GTA V</h1>
+<h1 class="text-center text-white">Borderlands 2</h1>
 
 <div class="container">
-    <img src="/repo/img/juegos/gtav/grand-theft-auto-v.jpg" alt="" class="img-fluid min-100">
+    <img src="/repo/img/juegos/Borderlands2/horizontal.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
         <span id="generos">Accion, Aventura, AAA</span>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
-                <div class="score high">97</div>
+                <div class="score high">89</div>
                 <div class="logo"></div>
                 <div class="wordmark">
                     <div class="metacritic">metacritic</div>
                     <div id="game_area_metalink">
-                        <a href="https://www.metacritic.com/game/grand-theft-auto-v/" class="link-info"
+                        <a href="https://www.metacritic.com/game/borderlands-2/" class="link-info"
                             target="_blank">Leer las reseñas</a> <img
                             src="https://store.akamai.steamstatic.com/public/images/ico/iconExternalLink.gif">
                     </div>
@@ -28,21 +28,12 @@
 
 <div class="container">
     <h2 class="mt-4">Descripcion del VideoJuego</h2>
-    <p>Grand Theft Auto V o GTA V es un juego de acción-aventura de mundo abierto desarrollado por la compañía británica
-        Rockstar North y distribuido por Rockstar Games.</p>
-    <p>Nueve años después de un atraco frustrado en Ludendorff (North Yankton), que dejó a uno de sus perpetrantes
-        muerto, otro bajo arresto y obligó a un tercero a la clandestinidad, el ex ladrón de bancos, Michael Townley,
-        fue tomado como muerto en North Yankton y ha sido puesto bajo protección de testigos por el agente corrupto del
-        FIB Dave Norton, amigo íntimo del mismo, trasladándolo así con su familia a Los Santos (San Andreas) con una
-        nueva identidad: Michael De Santa.</p>
+    <p>Una nueva era de disparos y saqueos está a punto de comenzar. Juega como uno de los cuatro nuevos buscadores de la Cámara y enfréntate a legiones de nuevas criaturas, psicópatas y al villano que las controla, Jack el Guapo. Haz nuevos amigos, equípalos con un cillón de armas y pelea a su lado en partidas cooperativas de 4 jugadores, en una implacable búsqueda de venganza y redención a través de un desconocido e impredecible planeta.</p>
 </div>
 
 <div class="container">
     <h2 class="mt-4">Gameplay/Trailer</h2>
-    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/QkkoHAzjnUs"
-        title="Grand Theft Auto V Trailer" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/5TW0wJTFLiw" title="Borderlands 2 - Launch Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div class="container">
@@ -60,16 +51,16 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="4000">
-                <img src="/repo/img/juegos/gtav/cap1.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap1.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/repo/img/juegos/gtav/cap2.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap2.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap3.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap3.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap4.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap4.jfif" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -89,7 +80,7 @@
     <h2 class="mt-4">Compralo aqui</h2>
     <div class="row">
         <div class="col compra steam ">
-            <a href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" rel="nofollow noopener noreferrer"
+            <a href="https://store.steampowered.com/app/49520/Borderlands_2/" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/steam.png"
@@ -99,14 +90,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $14.98
+                            $19.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra epic ">
-            <a href="https://store.epicgames.com/es-ES/p/grand-theft-auto-v" rel="nofollow noopener noreferrer"
+            <a href="https://store.epicgames.com/es-ES/bundles/borderlands-the-handsome-collection" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/logo_epic.svg"
@@ -116,14 +107,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $29.99
+                            $59.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra micro">
-            <a href="https://www.xbox.com/es-ar/games/store/grand-theft-auto-v-edicion-premium/c496clvxmjp8"
+            <a href="https://www.xbox.com/en-us/games/store/borderlands-the-handsome-collection/c4dqhrnn1zn5"
                 rel="nofollow noopener noreferrer" target="_blank">
                 <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logoCompra" fill="currentColor" class="bi bi-xbox"
@@ -136,7 +127,7 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $29.99
+                            $39.99
                         </div>
                     </div>
                 </div>
@@ -150,49 +141,43 @@
     <h3 class="mt-2">Minimos</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,
-                Windows 7 64 Bit Service Pack 1, Windows Vista 64</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows XP SP3</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4
-                CPUs) / AMD Phenom 9850 Quad-Core procesador (4 CPUs) @ 2.5GHz</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Dual Core a 2.4 GHz</span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">4 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">2 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA 9800 GT 1GB / AMD HD 4870 1GB
-                (DX 10, 10.1, 11)</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"> nVidia GeForce 8500 / ATI Radeon HD 2600 </span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 10</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 9.0c</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">65 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">13 GB</span>
         </li>
     </ul>
     <h3 class="mt-2">Recomendados</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,
-                Windows 7 64 Bit Service Pack 1</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows XP SP3 / Vista / Win 7</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8
-                FX-8350 @ 4GHZ (8 CPUs)</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">nVidia GeForce GTX 560 / ATI Radeon HD 5850</span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">8 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">2 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA GTX 660 2GB / AMD HD7870
-                2GB</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">nVidia GeForce GTX 560 / ATI Radeon HD 5850</span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"> DirectX 10 compatible</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 9.0c</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">65 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">20 GB</span>
         </li>
     </ul>
 </div>

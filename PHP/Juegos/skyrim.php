@@ -7,7 +7,7 @@
 <div class="container">
     <img src="/repo/img/juegos/skyrim/portada_Skyrim.jpg" alt="" class="img-fluid w-100">
     <div class="bottom">
-        <span>Mundo Abierto, Aventura</span>
+        <span id="generos">Mundo Abierto, Aventura</span>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
                 <div class="score high">96</div>
@@ -162,24 +162,24 @@
         </li>
     </ul>
 </div>
+<div class="container star">
+    <p>Deja tu calificación</p>
+    <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5" />
+        <label for="star5" title="5 estrellas">★</label>
 
-<p class="container mt-3">Deja tu calificación</p>
-<div class="container rating justify-content-end">
-    <input type="radio" id="star5" name="rating" value="5" />
-    <label for="star5" title="5 estrellas">★</label>
+        <input type="radio" id="star4" name="rating" value="4" />
+        <label for="star4" title="4 estrellas">★</label>
 
-    <input type="radio" id="star4" name="rating" value="4" />
-    <label for="star4" title="4 estrellas">★</label>
+        <input type="radio" id="star3" name="rating" value="3" />
+        <label for="star3" title="3 estrellas">★</label>
 
-    <input type="radio" id="star3" name="rating" value="3" />
-    <label for="star3" title="3 estrellas">★</label>
+        <input type="radio" id="star2" name="rating" value="2" />
+        <label for="star2" title="2 estrellas">★</label>
 
-    <input type="radio" id="star2" name="rating" value="2" />
-    <label for="star2" title="2 estrellas">★</label>
-
-    <input type="radio" id="star1" name="rating" value="1" />
-    <label for="star1" title="1 estrella">★</label>
+        <input type="radio" id="star1" name="rating" value="1" />
+        <label for="star1" title="1 estrella">★</label>
+    </div>
 </div>
-
 <script src="/repo/JS/stars.js"></script>
 <?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>

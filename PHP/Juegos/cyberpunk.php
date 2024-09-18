@@ -1,21 +1,21 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
 
-<title>Grand Theft Auto V - BestGamer</title>
+<title>Cyberpunk 2077 - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
-<h1 class="text-center text-white">Grand Theft Auto V | GTA V</h1>
+<h1 class="text-center text-white">Cyberpunk 2077</h1>
 
 <div class="container">
-    <img src="/repo/img/juegos/gtav/grand-theft-auto-v.jpg" alt="" class="img-fluid min-100">
+    <img src="/repo/img/juegos/cp2077/cyberpunk-2077-horizontal.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
-        <span id="generos">Accion, Aventura, AAA</span>
+        <span id="generos">Accion, Aventura, Mundo Abierto, Rol, Shooter, Simulacion, Ciberpunk</span>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
-                <div class="score high">97</div>
+                <div class="score high">86</div>
                 <div class="logo"></div>
                 <div class="wordmark">
                     <div class="metacritic">metacritic</div>
                     <div id="game_area_metalink">
-                        <a href="https://www.metacritic.com/game/grand-theft-auto-v/" class="link-info"
+                        <a href="https://www.metacritic.com/game/cyberpunk-2077/" class="link-info"
                             target="_blank">Leer las reseñas</a> <img
                             src="https://store.akamai.steamstatic.com/public/images/ico/iconExternalLink.gif">
                     </div>
@@ -28,21 +28,12 @@
 
 <div class="container">
     <h2 class="mt-4">Descripcion del VideoJuego</h2>
-    <p>Grand Theft Auto V o GTA V es un juego de acción-aventura de mundo abierto desarrollado por la compañía británica
-        Rockstar North y distribuido por Rockstar Games.</p>
-    <p>Nueve años después de un atraco frustrado en Ludendorff (North Yankton), que dejó a uno de sus perpetrantes
-        muerto, otro bajo arresto y obligó a un tercero a la clandestinidad, el ex ladrón de bancos, Michael Townley,
-        fue tomado como muerto en North Yankton y ha sido puesto bajo protección de testigos por el agente corrupto del
-        FIB Dave Norton, amigo íntimo del mismo, trasladándolo así con su familia a Los Santos (San Andreas) con una
-        nueva identidad: Michael De Santa.</p>
+    <p>Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en la megalópolis de Night City, donde te pondrás en la piel de un mercenario o una mercenaria ciberpunk y vivirás su lucha a vida o muerte por la supervivencia. Mejorado y con contenido nuevo adicional gratuito. Personaliza tu personaje y tu estilo de juego a medida que aceptas trabajos, te labras una reputación y desbloqueas mejoras. Las relaciones que forjes y las decisiones que tomes darán forma al mundo que te rodea. Aquí nacen las leyendas. ¿Cuál será la tuya?</p>
 </div>
 
 <div class="container">
     <h2 class="mt-4">Gameplay/Trailer</h2>
-    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/QkkoHAzjnUs"
-        title="Grand Theft Auto V Trailer" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/8X2kIfS6fb8" title="Cyberpunk 2077 – Tráiler oficial del E3 2018" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div class="container">
@@ -57,19 +48,24 @@
                 aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
                 aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="4000">
-                <img src="/repo/img/juegos/gtav/cap1.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/repo/img/juegos/gtav/cap2.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap2.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap3.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap3.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap4.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap4.jfif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/repo/img/juegos/cp2077/cap5.jfif" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -89,7 +85,7 @@
     <h2 class="mt-4">Compralo aqui</h2>
     <div class="row">
         <div class="col compra steam ">
-            <a href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" rel="nofollow noopener noreferrer"
+            <a href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/steam.png"
@@ -99,14 +95,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $14.98
+                            $44.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra epic ">
-            <a href="https://store.epicgames.com/es-ES/p/grand-theft-auto-v" rel="nofollow noopener noreferrer"
+            <a href="https://store.epicgames.com/es-ES/p/cyberpunk-2077" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/logo_epic.svg"
@@ -116,14 +112,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $29.99
+                            $49.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra micro">
-            <a href="https://www.xbox.com/es-ar/games/store/grand-theft-auto-v-edicion-premium/c496clvxmjp8"
+            <a href="https://www.xbox.com/en-us/games/store/cyberpunk-2077/bx3m8l83bbrw"
                 rel="nofollow noopener noreferrer" target="_blank">
                 <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logoCompra" fill="currentColor" class="bi bi-xbox"
@@ -136,7 +132,7 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $29.99
+                            $59.99
                         </div>
                     </div>
                 </div>
@@ -150,52 +146,47 @@
     <h3 class="mt-2">Minimos</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,
-                Windows 7 64 Bit Service Pack 1, Windows Vista 64</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">64-bit Windows 10</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4
-                CPUs) / AMD Phenom 9850 Quad-Core procesador (4 CPUs) @ 2.5GHz</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Core i7-6700 or Ryzen 5 1600</span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">4 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">12 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA 9800 GT 1GB / AMD HD 4870 1GB
-                (DX 10, 10.1, 11)</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380</span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 10</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX Version 12</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">65 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">70 GB</span>
         </li>
     </ul>
     <h3 class="mt-2">Recomendados</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,
-                Windows 7 64 Bit Service Pack 1</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">64-bit Windows 10</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8
-                FX-8350 @ 4GHZ (8 CPUs)</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Core i7-12700 or Ryzen 7 7800X3D</span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">8 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">16 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA GTX 660 2GB / AMD HD7870
-                2GB</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">GeForce RTX 2060 SUPER or Radeon RX 5700 XT or Arc A770</span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"> DirectX 10 compatible</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX Version 12</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">65 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">70 GB</span>
         </li>
     </ul>
 </div>
+
 <div class="container star">
     <p>Deja tu calificación</p>
     <div class="rating">

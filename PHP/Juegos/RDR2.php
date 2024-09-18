@@ -1,13 +1,13 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
 
-<title>Grand Theft Auto V - BestGamer</title>
+<title>Red Dead Redemption 2 - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
-<h1 class="text-center text-white">Grand Theft Auto V | GTA V</h1>
+<h1 class="text-center text-white">Red Dead Redemption 2</h1>
 
 <div class="container">
-    <img src="/repo/img/juegos/gtav/grand-theft-auto-v.jpg" alt="" class="img-fluid min-100">
+    <img src="/repo/img/juegos/RDR2/red-dead-redemption-2-horizontal.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
-        <span id="generos">Accion, Aventura, AAA</span>
+        <span id="generos">Mundo Abierto, Accion, Aventura, Western</span>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
                 <div class="score high">97</div>
@@ -15,7 +15,7 @@
                 <div class="wordmark">
                     <div class="metacritic">metacritic</div>
                     <div id="game_area_metalink">
-                        <a href="https://www.metacritic.com/game/grand-theft-auto-v/" class="link-info"
+                        <a href="https://www.metacritic.com/game/red-dead-redemption-2/" class="link-info"
                             target="_blank">Leer las reseñas</a> <img
                             src="https://store.akamai.steamstatic.com/public/images/ico/iconExternalLink.gif">
                     </div>
@@ -28,21 +28,14 @@
 
 <div class="container">
     <h2 class="mt-4">Descripcion del VideoJuego</h2>
-    <p>Grand Theft Auto V o GTA V es un juego de acción-aventura de mundo abierto desarrollado por la compañía británica
-        Rockstar North y distribuido por Rockstar Games.</p>
-    <p>Nueve años después de un atraco frustrado en Ludendorff (North Yankton), que dejó a uno de sus perpetrantes
-        muerto, otro bajo arresto y obligó a un tercero a la clandestinidad, el ex ladrón de bancos, Michael Townley,
-        fue tomado como muerto en North Yankton y ha sido puesto bajo protección de testigos por el agente corrupto del
-        FIB Dave Norton, amigo íntimo del mismo, trasladándolo así con su familia a Los Santos (San Andreas) con una
-        nueva identidad: Michael De Santa.</p>
+    <p>Con más de 175 premios al Juego del año y más de 250 valoraciones 
+        <br> 
+        Red Dead Redemption 2 en la America de 1899 contando la épica historia de Arthur Morgan y la banda de Van der Linde se ven obligados a huir. Con agentes federales y los mejores cazarrecompensas de la nación pisándoles los talones, la banda deberá atracar, robar y luchar para sobrevivir en su camino por el escabroso territorio del corazón de América. Mientras las divisiones internas aumentan y amenazan con separarlos a todos, Arthur deberá elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer.</p>
 </div>
 
 <div class="container">
     <h2 class="mt-4">Gameplay/Trailer</h2>
-    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/QkkoHAzjnUs"
-        title="Grand Theft Auto V Trailer" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/F63h3v9QV7w" title="Red Dead Redemption 2: Official Trailer #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div class="container">
@@ -57,19 +50,24 @@
                 aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
                 aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="4000">
-                <img src="/repo/img/juegos/gtav/cap1.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/RDR2/cap1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/repo/img/juegos/gtav/cap2.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/RDR2/cap2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap3.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/RDR2/cap3.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap4.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/RDR2/cap4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/repo/img/juegos/RDR2/cap5.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -89,7 +87,7 @@
     <h2 class="mt-4">Compralo aqui</h2>
     <div class="row">
         <div class="col compra steam ">
-            <a href="https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/" rel="nofollow noopener noreferrer"
+            <a href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/steam.png"
@@ -99,14 +97,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $14.98
+                            $59.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra epic ">
-            <a href="https://store.epicgames.com/es-ES/p/grand-theft-auto-v" rel="nofollow noopener noreferrer"
+            <a href="https://store.epicgames.com/es-ES/p/red-dead-redemption-2" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/logo_epic.svg"
@@ -116,14 +114,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $29.99
+                            $59.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra micro">
-            <a href="https://www.xbox.com/es-ar/games/store/grand-theft-auto-v-edicion-premium/c496clvxmjp8"
+            <a href="https://www.xbox.com/en-US/games/store/red-dead-redemption-2/9N2ZDN7NWQKV/0010"
                 rel="nofollow noopener noreferrer" target="_blank">
                 <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logoCompra" fill="currentColor" class="bi bi-xbox"
@@ -136,7 +134,7 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $29.99
+                            $59.99
                         </div>
                     </div>
                 </div>
@@ -150,49 +148,43 @@
     <h3 class="mt-2">Minimos</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,
-                Windows 7 64 Bit Service Pack 1, Windows Vista 64</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"> Windows 10 - 64-bit</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4
-                CPUs) / AMD Phenom 9850 Quad-Core procesador (4 CPUs) @ 2.5GHz</span>
-        </li>
-        <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">4 GB</span>
-        </li>
-        <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA 9800 GT 1GB / AMD HD 4870 1GB
-                (DX 10, 10.1, 11)</span>
-        </li>
-        <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 10</span>
-        </li>
-        <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">65 GB</span>
-        </li>
-    </ul>
-    <h3 class="mt-2">Recomendados</h3>
-    <ul>
-        <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,
-                Windows 7 64 Bit Service Pack 1</span>
-        </li>
-        <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8
-                FX-8350 @ 4GHZ (8 CPUs)</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;"> Intel® Core™ i5-2500K / AMD FX-6300</span>
         </li>
         <li>
             <strong>Memoria RAM: </strong><span style="font-size: inherit;">8 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA GTX 660 2GB / AMD HD7870
-                2GB</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"> DirectX 10 compatible</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">Direct X Compatible</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">65 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">150 GB</span>
+        </li>
+    </ul>
+    <h3 class="mt-2">Recomendados</h3>
+    <ul>
+        <li>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"> Windows 10 - 64-bit</span>
+        </li>
+        <li>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Intel® Core™ i7-4770K / AMD Ryzen 5 1500X</span>
+        </li>
+        <li>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">12 GB</span>
+        </li>
+        <li>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB</span>
+        </li>
+        <li>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">Direct X Compatible</span>
+        </li>
+        <li>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">150 GB</span>
         </li>
     </ul>
 </div>

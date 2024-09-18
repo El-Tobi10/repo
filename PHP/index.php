@@ -60,7 +60,7 @@
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="">
+                <a href="../PHP/Juegos/RDR2.php">
                     <img src="/repo/img/juegos/RDR2/RDR2.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -70,7 +70,7 @@
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="">
+                <a href="../PHP/Juegos/borderlands2.php">
                     <img src="/repo/img/juegos/Borderlands2/Borderlands2.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -82,7 +82,7 @@
     <div class="row row-cols-1 row-cols-md-4 justify-content-center juegos">
         <div class="col">
             <div class="card juego">
-                <a href="#">
+                <a href="../PHP/Juegos/cyberpunk.php">
                     <img src="/repo/img/juegos/cp2077/Cyberpunk-2077-portada.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
