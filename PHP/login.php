@@ -14,7 +14,7 @@
     <button type="submit" id="submitButton" class="btn btn-primary mt-3">Aceptar</button>
     <button type="reset" class="btn btn-secondary mt-3">Cancelar</button>
   </form>
-  <div class="text-center mb-3 ">Si no tienes cuenta puedes registrarte aqui <a href="/repo/PHP/register.php"><kbd>Regístrarte</kbd></a></div>
+  <div class="text-center mb-3 ">Si no tienes cuenta puedes registrarte aqui<a href="/repo/PHP/register.php"><kbd>Regístrarte</kbd></a></div>
 </div>
 
 <?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
