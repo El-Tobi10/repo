@@ -6,7 +6,7 @@
         $pass = $_POST['txtpass'];
         $rep_pass = $_POST['passrep'];
 
-        if($user!=null || $mail!=null || $pass!=null){
+        if($user!=null && $mail!=null && $pass!=null){
             if($pass != $rep_pass){
                 echo '
                 <script>
@@ -34,9 +34,22 @@
                 </script>';
                 exit();
             }
+            
+            if(strpos($mail, "@bestgamer.com") != FALSE){
+                $sql = "INSERT INTO administradores(mail,usuario,contrasenia)VALUES('$mail','$user','$pass')";
+                mysqli_query($con,$sql);
+                echo'<script>
+                        alert("Registro completado con exito.");
+                    </script>';
+                header("Location:../login.php");
+                exit();
+            }
 
             $sql = "INSERT INTO usuarios(mail,usuario,contrasenia)VALUES('$mail','$user','$pass')";
             mysqli_query($con,$sql);
+            echo '<script>
+                    alert("Registro completado con exito.");
+                </script>';
             header("Location:../login.php");
         }
         else {

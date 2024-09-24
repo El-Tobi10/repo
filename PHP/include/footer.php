@@ -1,7 +1,7 @@
     <footer>
         <div class="row">
             <div class="col d-flex justify-content-center align-items-end">
-                <a href="../PHP/terminos.php"
+                <a href="/repo/PHP/terminos.php"
                     class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Terminos
                     y condiciones</a>
             </div>

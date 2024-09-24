@@ -103,17 +103,17 @@
         <div class="col">
             <div class="card juego">
                 <a href="#">
-                    <img src="/repo/" class="card-img-top" alt="...">
+                    <img src="/repo/img/juegos/elden/Elden_Ring_portada.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
-                    <h5 class="card-title">-</h5>
+                    <h5 class="card-title">Elden Ring</h5>
                 </div>
             </div>
         </div>
         
     </div>
     <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="#" class="btn active boton" role="button" data-bs-toggle="button" aria-pressed="true">Ver Mas</a>
+        <a href="/repo/PHP/pag_juegos.php" class="btn active boton" aria-pressed="true">Ver Mas</a>
     </div>
     
     <h2 class="container text-center mt-4">Preguntas frecuentes</h2>

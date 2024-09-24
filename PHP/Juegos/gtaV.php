@@ -7,7 +7,12 @@
 <div class="container">
     <img src="/repo/img/juegos/gtav/grand-theft-auto-v.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
-        <span id="generos">Accion, Aventura, AAA</span>
+        <details>
+            <summary>Detalles Generales</summary>
+            <p><strong>Generos</strong>: Acción, Aventura, AAA</p>
+            <p><strong>Desarrollador</strong>: Rockstar Games</p>
+            <p><strong>Lanzamiento</strong>: </p>
+        </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
                 <div class="score high">97</div>

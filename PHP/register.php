@@ -1,8 +1,9 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
 <title>Login - BestGamer</title>
+<link rel="stylesheet" href="../CSS/form.css">
 <div class="text-white">
     <h2 class="text-center">Registro</h2>
-    <form action="../PHP/login/val_registro.php" method="POST" class="m-4 row row-cols-1 row-cols-md-2 g-5">
+    <form action="../PHP/login/val_registro.php" method="POST" class="formulario m-4 row row-cols-1 row-cols-md-2 g-5">
         <div class="col">
             <div class="sm-10 row ">
                 <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
@@ -23,7 +24,7 @@
             <div class="sm-10 row">
                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                 <input type="password" name="txtpass" class="form-control" id="exampleInputPassword1"
-                    placeholder="Debe tener al menos 8 caracteres.">
+                    placeholder="Debe tener al menos 8 caracteres." min-width="8ch">
             </div>
         </div>
 
