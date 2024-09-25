@@ -113,7 +113,7 @@
         
     </div>
     <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="/repo/PHP/pag_juegos.php" class="btn active boton" aria-pressed="true">Ver Mas</a>
+        <a href="/repo/PHP/pag_juegos1.php" class="btn active boton" aria-pressed="true">Ver Mas</a>
     </div>
     
     <h2 class="container text-center mt-4">Preguntas frecuentes</h2>
@@ -171,5 +171,4 @@
     </div>
 </div>
 </main>
-
 <?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>

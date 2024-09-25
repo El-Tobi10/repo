@@ -9,7 +9,7 @@
     <div class="bottom">
         <details>
             <summary>Detalles Generales</summary>
-            <p><strong>Generos</strong>: Acción, Aventura, AAA</p>
+            <p><strong>Generos</strong>: Acción, Aventura, Mundo abierto, Multijugador</p>
             <p><strong>Desarrollador</strong>: Rockstar Games</p>
             <p><strong>Lanzamiento</strong>: </p>
         </details>

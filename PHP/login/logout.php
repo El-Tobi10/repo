@@ -1,5 +1,5 @@
 <?php 
-    session_start()
-    session_destroy()
-    header("location: ../PHP/index.php")
+    session_start();
+    session_destroy();
+    header("location: /repo/PHP/index.php");
 ?>

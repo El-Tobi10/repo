@@ -116,3 +116,26 @@
     background-color: #1B3940;
     color: #FFFFFF;
 }
+@media screen and (max-width: 991px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+    }
+    .contenedor .cartas img{
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+        aspect-ratio: 3/4;
+        overflow: auto;
+    }    
+    .cartas:not(hover){
+        filter: none;
+    }
+    .from, .ubi, .rock, .beth, .dog {
+        background-image: none;
+        background-color: #1c788d;
+    }
+}

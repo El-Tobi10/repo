@@ -35,8 +35,9 @@
                 exit();
             }
             
-            if(strpos($mail, "@bestgamer.com") != FALSE){
-                $sql = "INSERT INTO administradores(mail,usuario,contrasenia)VALUES('$mail','$user','$pass')";
+            //Administrador
+            if(strpos($mail, "@bestgamer.com") != FALSE){ 
+                $sql = "INSERT INTO usuarios(mail,usuario,contrasenia,id_rol)VALUES('$mail','$user','$pass', 1)";
                 mysqli_query($con,$sql);
                 echo'<script>
                         alert("Registro completado con exito.");
@@ -44,8 +45,9 @@
                 header("Location:../login.php");
                 exit();
             }
-
-            $sql = "INSERT INTO usuarios(mail,usuario,contrasenia)VALUES('$mail','$user','$pass')";
+            
+            //Usuario
+            $sql = "INSERT INTO usuarios(mail,usuario,contrasenia,id_rol)VALUES('$mail','$user','$pass', 2)";
             mysqli_query($con,$sql);
             echo '<script>
                     alert("Registro completado con exito.");

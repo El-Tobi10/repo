@@ -24,14 +24,14 @@
             <div class="sm-10 row">
                 <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                 <input type="password" name="txtpass" class="form-control" id="exampleInputPassword1"
-                    placeholder="Debe tener al menos 8 caracteres." min-width="8ch">
+                    placeholder="Debe tener al menos 8 caracteres." minlength="8">
             </div>
         </div>
 
         <div class="col">
             <div class="sm-10 row">
                 <label for="exampleInputPassword1" class="form-label">Repíta su contraseña</label>
-                <input type="password" name="passrep" class="form-control" id="exampleInputPassword1">
+                <input type="password" name="passrep" class="form-control" id="exampleInputPassword1" minlength="8">
             </div>
         </div>
         <div class="col">

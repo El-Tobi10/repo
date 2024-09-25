@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,7 +102,15 @@
                             </span>
                         </div>
                     </form>
-                    <a href="/repo/PHP/login.php"><button class="inicioSesion" type="button">Iniciar sesión</button></a>
+                    <?php
+                    if(isset($_SESSION['admin'])){?>
+                        <a href="/repo/PHP/Juegos/admin_juegos/ingreso_juegos.php"><button class="inicioSesion mr-2" type="button">Ingresar Juego</button></a>
+                        <a href="/repo/PHP/login/logout.php"><button class="inicioSesion" type="button">Cerrar Sesión</button></a>
+                    <?php } else if (isset($_SESSION['usuario'])){ ?>
+                        <a href="/repo/PHP/login/logout.php"><button class="inicioSesion" type="button">Cerrar Sesión</button></a>
+                    <?php } else {?>
+                        <a href="/repo/PHP/login.php"><button class="inicioSesion" type="button">Iniciar sesión</button></a>
+                    <?php }?>
                 </div>
             </div>
         </nav>

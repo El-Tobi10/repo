@@ -70,5 +70,5 @@
     </script>
     <script src="/repo/JS/stars.js"></script>
     </body>
-
     </html>
+    <?php include "C:/xampp/htdocs/repo/PHP/go_top.php"?>
