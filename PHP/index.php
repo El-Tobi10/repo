@@ -115,7 +115,7 @@
     <div class="d-grid gap-2 col-6 mx-auto">
         <a href="/repo/PHP/pag_juegos1.php" class="btn active boton" aria-pressed="true">Ver Mas</a>
     </div>
-    
+    <hr class="border border-secundary border-2 opacity-75 mx-3">
     <h2 class="container text-center mt-4">Preguntas frecuentes</h2>
     <div class="accordion" id="accordionPanelsStayOpenExample">
         <div class="accordion-item">

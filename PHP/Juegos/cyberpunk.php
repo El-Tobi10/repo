@@ -187,23 +187,45 @@
     </ul>
 </div>
 
-<div class="container star">
-    <p>Deja tu calificación</p>
-    <div class="rating">
-        <input type="radio" id="star5" name="rating" value="5"/>
-        <label for="star5" title="5 estrellas">★</label>
-
-        <input type="radio" id="star4" name="rating" value="4"/>
-        <label for="star4" title="4 estrellas">★</label>
-
-        <input type="radio" id="star3" name="rating" value="3"/>
-        <label for="star3" title="3 estrellas">★</label>
-
-        <input type="radio" id="star2" name="rating" value="2"/>
-        <label for="star2" title="2 estrellas">★</label>
-
-        <input type="radio" id="star1" name="rating" value="1"/>
-        <label for="star1" title="1 estrella">★</label>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Califica este Juego</h2>
+                    <form id="ratingForm">
+                        <div class="mb-4">
+                            <label for="ratingStars" class="form-label">Tu Calificacion:</label>
+                            <div id="ratingStars" class="rating-stars" role="radiogroup"
+                                aria-label="Rate the fitness class">
+                                <i class="bi bi-star" data-rating="1" tabindex="0" role="radio"
+                                    aria-checked="false"></i>
+                                <i class="bi bi-star" data-rating="2" tabindex="0" role="radio"
+                                    aria-checked="false"></i>
+                                <i class="bi bi-star" data-rating="3" tabindex="0" role="radio"
+                                    aria-checked="false"></i>
+                                <i class="bi bi-star" data-rating="4" tabindex="0" role="radio"
+                                    aria-checked="false"></i>
+                                <i class="bi bi-star" data-rating="5" tabindex="0" role="radio"
+                                    aria-checked="false"></i>
+                            </div>
+                            <div id="ratingError" class="text-danger mt-2" role="alert"></div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="feedback" class="form-label">Dejanos un comentario:</label>
+                            <textarea id="feedback" class="form-control" rows="3"
+                                placeholder="Comparte tus pensamientos sobre el juego..."
+                                aria-describedby="feedbackHelp"></textarea>
+                            <div id="feedbackHelp" class="form-text comenthelp">Tu comentario nos ayudará mucho a
+                                mejorar!</div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" id="submitRating" class="btn btn-primary" disabled>Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

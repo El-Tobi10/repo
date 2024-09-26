@@ -38,7 +38,8 @@
                         <div class="tooltip">GitHub</div>
                     </li>
                     <li class="icon-content">
-                        <a href="https://www.instagram.com/tobiasmg10/" aria-label="Instagram" data-social="instagram" target="_blank">
+                        <a href="https://www.instagram.com/tobiasmg10/" aria-label="Instagram" data-social="instagram"
+                            target="_blank">
                             <div class="filled"></div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-instagram" viewBox="0 0 16 16" xml:space="preserve">
@@ -50,7 +51,8 @@
                         <div class="tooltip">Instagram</div>
                     </li>
                     <li class="icon-content">
-                        <a href="https://api.whatsapp.com/send?phone=2255419860" aria-label="Whatsapp" data-social="Whatsapp" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=2255419860" aria-label="Whatsapp"
+                            data-social="Whatsapp" target="_blank">
                             <div class="filled"></div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -69,6 +71,18 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script src="/repo/JS/stars.js"></script>
+    <script src="/repo/JS/year.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init({
+            publicKey: "AZCmgqm6UYwGKV7nV",
+        });
+    })();
+    </script> -->
     </body>
+
     </html>
     <?php include "C:/xampp/htdocs/repo/PHP/go_top.php"?>

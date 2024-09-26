@@ -12,7 +12,14 @@ if (form){
             saveDataToLocalStorage();
             window.location ="../PHP/login/val_ingreso.php";
         }else{
-            alert('Todos los datos son obligatorios')
+            Swal.fire({
+                title: 'Campos incompletos',
+                text: `Tienes que ingresar todos los datos antes de aceptar. Intente de nuevo.`,
+                icon: 'error',
+                confirmButtonText: 'Aceptar',
+                confirmButtonColor: '#038dac',
+                allowOutsideClick: false
+            });
         }
     })
 }

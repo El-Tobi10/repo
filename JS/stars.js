@@ -1,25 +1,53 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const ratingInputs = document.querySelectorAll('.rating input');
-    ratingInputs.forEach((input) => {
-        input.addEventListener('change', () => {
-            const ratingValue = input.value;
-            console.log("Has dado una puntuación de ${ratingValue} estrellas");
-            // Aquí puedes enviar la puntuación al servidor o almacenarla en una base de datos
+document.addEventListener('DOMContentLoaded', function() {
+    const ratingStars = document.querySelectorAll('.rating-stars i');
+    const submitButton = document.getElementById('submitRating');
+    const ratingError = document.getElementById('ratingError');
+    const ratingForm = document.getElementById('ratingForm');
+    let currentRating = 0;
+    const serviceID = 'default_service';
+    const templateID = 'template_str5ce9';
+    
+    function updateRating(rating) {
+        currentRating = rating;
+        ratingStars.forEach((star, index) => {
+            star.classList.toggle('bi-star-fill', index < rating);
+            star.classList.toggle('bi-star', index >= rating);
+            star.setAttribute('aria-checked', index < rating);
         });
-    });
-    const ratingForm = document.querySelector('.rating');
-    ratingForm.addEventListener('change', (e) => {
-        const ratingValue = document.querySelector('input[name="rating"]:checked').value;
-        fetch('/enviar-puntuacion', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ rating: ratingValue }),
-        }).then(response => {
-            if (response.ok) {
-                console.log('Puntuación enviada con éxito');
+        submitButton.disabled = rating === 0;
+        ratingError.textContent = '';
+    }
+
+    ratingStars.forEach(star => {
+        star.addEventListener('mouseenter', () => updateRating(parseInt(star.dataset.rating)));
+        star.addEventListener('click', () => updateRating(parseInt(star.dataset.rating)));
+        star.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                updateRating(parseInt(star.dataset.rating));
             }
         });
+    });
+
+    document.querySelector('.rating-stars').addEventListener('mouseleave', () => updateRating(currentRating));
+
+    ratingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (currentRating === 0) {
+            ratingError.textContent = 'Ingrese una calificacion antes de enviar.';
+            return;
+        }
+        
+        Swal.fire({
+            title: 'Calificación enviada',
+            text: `Tu calificación ha sido enviada con éxito. La calificación es de ${currentRating} estrella/s.`,
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#038dac',
+            allowOutsideClick: false
+        });
+
+        ratingForm.reset();
+        updateRating(0);
     });
 });
