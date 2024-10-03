@@ -1,4 +1,9 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php
+    if(isset($_SESSION("admin")) == null && isset($_SESSION("usuario")) == null){
+        header("location:../login.php");
+        die();
+    }?>
 
 <title>Juegos - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/pag_juegos.css">
@@ -149,11 +154,11 @@
 </div>
 <div class="btn-toolbar justify-content-center my-3" role="toolbar" aria-label="Toolbar with button groups">
     <div class="btn-group" role="group" aria-label="First group">
-        <button onclick="filterGames(1)" type="button" class="btn btn-primary">1</button>
-        <button onclick="filterGames(2)" type="button" class="btn btn-primary">2</button>
-        <button onclick="filterGames(3)" type="button" class="btn btn-primary">3</button>
-        <button onclick="filterGames(4)" type="button" class="btn btn-primary">4</button>
-        <button onclick="filterGames(5)" type="button" class="btn btn-primary">5</button>
+        <button type="button" class="btn btn-primary">1</button>
+        <button type="button" class="btn btn-primary">2</button>
+        <button type="button" class="btn btn-primary">3</button>
+        <button type="button" class="btn btn-primary">4</button>
+        <button type="button" class="btn btn-primary">5</button>
     </div>
 </div>
 <script src="/repo/JS/filtrado_pag_juegos.js"></script>

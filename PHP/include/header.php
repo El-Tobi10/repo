@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item op">
-                            <a class="nav-link" aria-current="page" href="../PHP/index.php">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="/repo/PHP/index.php">Inicio</a>
                         </li>
                         <li class="nav-item dropdown op">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

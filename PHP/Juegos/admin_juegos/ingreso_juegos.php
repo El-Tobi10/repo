@@ -1,9 +1,16 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php
+    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    if(!isset($_SESSION['admin'])){
+        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        die();
+    }?>
+
 <title>Ingreso de Juegos - BestGamer</title>
 <link rel="stylesheet" href="../CSS/form.css">
 
 <h1 class="text-center">Ingrese los datos del Juego</h1>
-<form action="insertarJuego.php" method="post" class="formulario mx-5">
+<form action="val_juego.php" method="post" class="formulario mx-5">
     <div class="mb-3">
         <label class="form-label">Titulo</label>
         <input type="text" name="titulo" class="form-control">
@@ -14,11 +21,47 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Desarrollador</label>
-        <input type="text" name="desarrollador" class="form-control">
+        <select name="desarrollador" class="form-control" id="desarrollador-select">
+            <option value="0">--Seleccione un Desarrollador--</option>
+            <?php
+                $sql = "SELECT DISTINCT desarrollador FROM juegos";
+                $result = mysqli_query($con, $sql);
+                
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value='" . $row['desarrollador'] . "'>" . $row['desarrollador'] . "</option>";
+                }
+                echo"<option value='otro'>Otro</option>";
+            ?>
+        </select>
+        <div id="otro-input" class="mt-2" style="display: none;">
+            <input type="text" class="form-control" name="otro-input" placeholder="Ingrese otro desarrollador">
+        </div>
+        <script>
+        document.getElementById('desarrollador-select').addEventListener('change', function() {
+            if (this.value === 'otro') {
+                document.getElementById('otro-input').style.display = 'block';
+            } else {
+                document.getElementById('otro-input').style.display = 'none';
+            }
+        });
+        </script>
     </div>
     <div class="mb-3">
         <label class="form-label">Lanzamiento</label>
         <input type="date" name="lanzamiento" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Genero/s</label>
+        <div class="form-check">
+            <?php
+                $sql = "SELECT * FROM generos";
+                $result = mysqli_query($con, $sql);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<input class='form-check-input' type='checkbox' name='".$row['genero']."'>
+                    <label class='form-check-label'>".$row['genero']."</label><br>";
+                }
+            ?>
+        </div>
     </div>
     <div class="mb-3">
         <label class="form-label">Descripcion</label>
