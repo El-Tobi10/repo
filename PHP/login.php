@@ -5,7 +5,7 @@
     <h2 class="text-center">Iniciar Sesion</h2>
     <form action="../PHP/login/val_ingreso.php" id="formRegister" class="formulario mx-5" method="POST">
         <div class="sm-10 row ">
-            <label for="exampleInputEmail1" class="form-label">Ingrese su Email o Usuario</label>
+            <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
             <input type="text" name="txtmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                 placeholder="name@example.com">
         </div>

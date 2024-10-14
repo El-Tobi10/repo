@@ -20,7 +20,8 @@
     <!--Css-->
     <link rel="stylesheet" href="/repo/CSS/header_footer.css">
     <link rel="stylesheet" href="/repo/CSS/index.css">
-    <!--JavaScript-->
+    <!--DataTable-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
 </head>
 
 <body>
@@ -105,12 +106,40 @@
                     </form>
                     <?php
                     if(isset($_SESSION['admin'])){?>
-                        <a href="/repo/PHP/Juegos/admin_juegos/ingreso_juegos.php"><button class="inicioSesion mr-2" type="button">Ingresar Juego</button></a>
-                        <a href="/repo/PHP/login/logout.php"><button class="inicioSesion" type="button">Cerrar Sesión</button></a>
+                    <a href="/repo/PHP/Juegos/admin_juegos/ingreso_juegos.php"><button class="inicioSesion mr-2"
+                            type="button">Ingresar Juego</button></a>
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hola Admin
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="/repo/PHP/login/edit.php" class="dropdown-item">Editar
+                                        Usuario</a></li>
+                                <li><a href="/repo/PHP/login/logout.php" class="dropdown-item">Cerrar
+                                        Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                     <?php } else if (isset($_SESSION['usuario'])){ ?>
-                        <a href="/repo/PHP/login/logout.php"><button class="inicioSesion" type="button">Cerrar Sesión</button></a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="dropdown">
+                            <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hola Usuario
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li><a href="/repo/PHP/login/edit.php" class="dropdown-item">Editar
+                                        Usuario</a></li>
+                                <li><a href="/repo/PHP/login/logout.php" class="dropdown-item">Cerrar
+                                        Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                     <?php } else {?>
-                        <a href="/repo/PHP/login.php"><button class="inicioSesion" type="button">Iniciar sesión</button></a>
+                    <a href="/repo/PHP/login.php"><button class="inicioSesion" type="button">Iniciar sesión</button></a>
                     <?php }?>
                 </div>
             </div>

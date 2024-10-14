@@ -1,5 +1,11 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-
+<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php
+    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
+        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        die();
+    }?>
 <title>Grand Theft Auto V - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
 <h1 class="text-center text-white">Grand Theft Auto V | GTA V</h1>
@@ -11,7 +17,7 @@
             <summary>Detalles Generales</summary>
             <p><strong>Generos</strong>: Acción, Aventura, Mundo abierto, Multijugador</p>
             <p><strong>Desarrollador</strong>: Rockstar Games</p>
-            <p><strong>Lanzamiento</strong>: </p>
+            <p><strong>Lanzamiento</strong>: 2014-11-18</p>
         </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">

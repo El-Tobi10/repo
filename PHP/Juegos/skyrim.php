@@ -1,5 +1,11 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-
+<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php
+    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
+        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        die();
+    }?>
 <title>The Elder Scrolls V: Skyrim - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
 <h1 class="text-center text-white">The Elder Scrolls V: Skyrim</h1>
@@ -7,7 +13,12 @@
 <div class="container">
     <img src="/repo/img/juegos/skyrim/portada_Skyrim.jpg" alt="" class="img-fluid w-100">
     <div class="bottom">
-        <span id="generos">Mundo Abierto, Aventura</span>
+        <details>
+            <summary>Detalles Generales</summary>
+            <p><strong>Generos</strong>: Acción, Aventura, Mundo abierto</p>
+            <p><strong>Desarrollador</strong>: Bethesda Game Studios</p>
+            <p><strong>Lanzamiento</strong>: 2011-11-11</p>
+        </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
                 <div class="score high">96</div>

@@ -1,29 +1,25 @@
-#toTopHover{
+#toTopHover {
     margin: 0;
     padding: 0;
     border: 0;
     vertical-align: baseline
 }
-#gp-to-top{
-    color: #fff;
-    background-color: #196273;
-    display: none;
+
+#gp-to-top {
     position: fixed;
     right: 20px;
     bottom: 94px;
-    z-index: 9001;
-    overflow: hidden;
-    padding: 13px 15px 15px;
-    font-size: 24px;
-    line-height: 1;
+    display: inline;
+    z-index: 2; 
+    padding: 6px 10px 10px;
     background: #3e6a91;
     color: #fff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
-#gp-to-top:hover {
-    opacity: 1
+
+#go-to-top.mostrar {
+    display: block;
 }
+
 .bi {
     display: inline-block;
     font-size: inherit;
@@ -31,9 +27,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
+
 .bi-caret-up:before {
     content: "\F238";
 }
+
 .bi-caret-up:after {
     content: "";
     visibility: hidden;

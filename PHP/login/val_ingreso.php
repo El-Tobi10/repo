@@ -4,7 +4,7 @@
         $user = trim($_POST['txtmail']);
         $pass = trim($_POST['txtpass']);
 
-        $validar_usuario= mysqli_query($con, "SELECT * FROM usuarios WHERE (mail='$user' OR usuario ='$user') AND contrasenia='$pass'");
+        $validar_usuario= mysqli_query($con, "SELECT * FROM usuarios WHERE mail='$user' AND contrasenia='$pass'");
         $filas=mysqli_fetch_array($validar_usuario);
 
         if($filas['id_rol']==1){

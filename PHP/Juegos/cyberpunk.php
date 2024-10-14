@@ -1,5 +1,11 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-
+<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php
+    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
+        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        die();
+    }?>
 <title>Cyberpunk 2077 - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
 <h1 class="text-center text-white">Cyberpunk 2077</h1>
@@ -8,6 +14,12 @@
     <img src="/repo/img/juegos/cp2077/cyberpunk-2077-horizontal.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
         <span id="generos">Accion, Aventura, Mundo Abierto, Rol, Shooter, Simulacion, Ciberpunk</span>
+        <details>
+            <summary>Detalles Generales</summary>
+            <p><strong>Generos</strong>: Accion, Aventura, Mundo Abierto, Rol, Shooter, Simulacion, Ciberpunk</p>
+            <p><strong>Desarrollador</strong>: CD Projekt Red</p>
+            <p><strong>Lanzamiento</strong>: 2020-12-10</p>
+        </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
                 <div class="score high">86</div>

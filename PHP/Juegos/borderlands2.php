@@ -1,5 +1,11 @@
 <?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-
+<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php
+    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
+        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        die();
+    }?>
 <title>Borderlands 2 - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
 <h1 class="text-center text-white">Borderlands 2</h1>
@@ -7,7 +13,12 @@
 <div class="container">
     <img src="/repo/img/juegos/Borderlands2/horizontal.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
-        <span id="generos">Accion, Aventura, AAA</span>
+        <details>
+            <summary>Detalles Generales</summary>
+            <p><strong>Generos</strong>: Acción, Aventura, Mundo abierto, Multijugador</p>
+            <p><strong>Desarrollador</strong>: Gearbox Software</p>
+            <p><strong>Lanzamiento</strong>: 2012-09-18</p>
+        </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
                 <div class="score high">89</div>

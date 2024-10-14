@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/repo/CSS/go_top.css">
-<a href="#" id="gp-to-top" style="display: inline;">
-    <span id="toTopHover"></span>
+<a href="#" id="gp-to-top" >
+    <span id="toTopHover" style="display: inline;"></span>
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-caret-up"
         viewBox="0 0 16 16">
         <path

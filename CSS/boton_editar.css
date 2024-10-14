@@ -1,0 +1,6 @@
+.editar{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    margin: 7px;
+}
