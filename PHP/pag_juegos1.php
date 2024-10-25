@@ -8,6 +8,42 @@
 <title>Juegos - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/pag_juegos.css">
 
+<div class="card-header text-center"><strong>Listado de Personas </strong></div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Nacionalidad</th>
+            <th>Foto</th>
+            <th>Sexo</th>
+            <th>Dosis</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <?php
+            $query = "SELECT * FROM juegos INNER JOIN requisitos_recomendados ON juegos.id_juego =            requisitos_recomendados.id_reqRec";
+            $resultado = mysqli_query($con,$query);
+            while($row = mysqli_fetch_array($resultado)){
+        ?>
+        <tr>
+            <td><?php echo $row['titulo'];?></td>
+            <td><?php echo $row['desarrollador'];?></td>
+            <td><?php echo "<img height='70px' width='60px' src='C:/xampp/htdocs/repo/img/juegos/".$row['img_portada']."'>";?></td>
+            <td><?php echo $row['link_trailer']; ?></td>
+            <td><?php echo $row['generos']; ?></td>
+            <td><?php echo $row['lanzamiento']; ?></td>
+        </tr>
+
+        <?php } ?>
+    </tbody>
+</table>
+
+
+
+<!-- 
 <table id="example">
     <tbody>
         <tr class="row">
@@ -189,7 +225,7 @@
         <button type="button" class="btn btn-primary">5</button>
     </div>
 </div>
-<div id="game_data"></div>
+<div id="game_data"></div> -->
 
 <script>
 new DataTable('#example');
