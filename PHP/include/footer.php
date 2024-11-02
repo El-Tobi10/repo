@@ -74,22 +74,15 @@
     <script src="/repo/JS/stars.js"></script>
     <script src="/repo/JS/year.js"></script>
     <script src="/repo/JS/go_top.js"></script>
+    <script src="/repo/JS/dropzone.js"></script>
+    <!-- Dropzone js -->
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JQuery Js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- DataTable Js -->
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
-    <!-- EmailJS -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function() {
-        emailjs.init({
-            publicKey: "AZCmgqm6UYwGKV7nV",
-        });
-    })();
-    </script> -->
 </body>
     </html>
     <?php include "C:/xampp/htdocs/repo/PHP/go_top.php"?>

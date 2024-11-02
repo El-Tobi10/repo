@@ -1,4 +1,5 @@
-<?php session_start();?>
+<?php include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,8 @@
     <link rel="stylesheet" href="/repo/CSS/index.css">
     <!--DataTable-->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+    <!-- Dropzone -->
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 </head>
 
 <body>
@@ -105,34 +108,67 @@
                         </div>
                     </form>
                     <?php
-                    if(isset($_SESSION['admin'])){?>
+                    if(isset($_SESSION['admin'])){
+                        $stmt = $con->prepare("SELECT usuario FROM usuarios WHERE mail = ?");
+                        if ($stmt === false) {
+                            die("Error en la preparación de la consulta: " . $con->error);
+                        }
+                        $stmt->bind_param("s", $_SESSION['admin']);
+                        $stmt->execute();
+
+                        $result = $stmt->get_result();
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                            $user = $row['usuario'];
+                        } else {
+                            echo "No se encontró ningún usuario con ese correo.";
+                        }
+
+                        $stmt->close();
+                        ?>
                     <a href="/repo/PHP/Juegos/admin_juegos/ingreso_juegos.php"><button class="inicioSesion mr-2"
                             type="button">Ingresar Juego</button></a>
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="dropdown">
-                            <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Hola Admin
-                            </a>
+                            <?php echo "<a class='nav-link dropdown-toggle text-white' role='button' data-bs-toggle='dropdown'
+                                aria-expanded='false'>
+                                Hola ". $user ."
+                            </a>";?>
                             <ul class="dropdown-menu ">
                                 <li><a href="/repo/PHP/login/edit.php" class="dropdown-item">Editar
-                                        Usuario</a></li>
+                                Nombre</a></li>
                                 <li><a href="/repo/PHP/login/logout.php" class="dropdown-item">Cerrar
                                         Sesión</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <?php } else if (isset($_SESSION['usuario'])){ ?>
+                    <?php } else if (isset($_SESSION['usuario'])){ 
+                        $stmt = $con->prepare("SELECT usuario FROM usuarios WHERE mail = ?");
+                        if ($stmt === false) {
+                            die("Error en la preparación de la consulta: " . $con->error);
+                        }
+                        $stmt->bind_param("s", $_SESSION['usuario']);
+                        $stmt->execute();
+
+                        $result = $stmt->get_result();
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                            $user = $row['usuario'];
+                        } else {
+                            echo "No se encontró ningún usuario con ese correo.";
+                        }
+
+                        $stmt->close();?>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="dropdown">
-                            <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Hola Usuario
-                            </a>
+                            <?php echo "<a class='nav-link dropdown-toggle text-white' role='button' data-bs-toggle='dropdown'
+                                aria-expanded='false'>
+                                Hola ". $user ."
+                            </a>";?>
                             <ul class="dropdown-menu ">
                                 <li><a href="/repo/PHP/login/edit.php" class="dropdown-item">Editar
-                                        Usuario</a></li>
+                                        Nombre</a></li>
                                 <li><a href="/repo/PHP/login/logout.php" class="dropdown-item">Cerrar
                                         Sesión</a></li>
                             </ul>

@@ -24,7 +24,9 @@
 
     <tbody>
         <?php
-            $query = "SELECT * FROM juegos INNER JOIN requisitos_recomendados ON juegos.id_juego =            requisitos_recomendados.id_reqRec";
+             
+            $query = "SELECT * FROM juegos"; 
+            // INNER JOIN requisitos_recomendados ON juegos.id_juego = requisitos_recomendados.id_reqRec";
             $resultado = mysqli_query($con,$query);
             while($row = mysqli_fetch_array($resultado)){
         ?>

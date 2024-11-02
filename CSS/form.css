@@ -5,3 +5,15 @@
     margin: 2%;
     flex: 1;
 }
+#my-dropzone{
+    border: 2px dashed #ccc;
+    background-color: #eee;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.epic{
+    vertical-align: middle;
+    max-width: 20px;
+}

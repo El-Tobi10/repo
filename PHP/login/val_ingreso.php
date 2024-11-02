@@ -9,11 +9,13 @@
 
         if($filas['id_rol']==1){
             $_SESSION["admin"] = $user;
+            $_SESSION["id"] = $filas['id_usuario'];
             header("location:/repo/PHP/index.php");
             exit();
         }
-        else if($filas['id_rol']==2){
+        else if($filas['id_rol'] == 2){
             $_SESSION["usuario"] = $user;
+            $_SESSION["id"] = $filas['id_usuario'];
             header("location: /repo/PHP/pag_juegos1.php");
             exit();
         }
