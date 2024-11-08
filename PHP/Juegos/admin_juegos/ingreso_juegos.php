@@ -37,15 +37,15 @@
                 <div id="otro-input" class="mt-2" style="display: none;">
                     <input type="text" class="form-control" name="otro-input" placeholder="Ingrese otro desarrollador">
                 </div>
-                <script>
-                document.getElementById('desarrollador-select').addEventListener('change', function() {
-                    if (this.value === 'otro') {
-                        document.getElementById('otro-input').style.display = 'block';
-                    } else {
-                        document.getElementById('otro-input').style.display = 'none';
-                    }
-                });
-                </script>
+                    <script>
+                    document.getElementById('desarrollador-select').addEventListener('change', function() {
+                        if (this.value === 'otro') {
+                            document.getElementById('otro-input').style.display = 'block';
+                        } else {
+                            document.getElementById('otro-input').style.display = 'none';
+                        }
+                    });
+                    </script>
             </div>
             <div class="mb-3">
                 <label class="form-label"><strong>Lanzamiento</strong></label>
@@ -116,14 +116,7 @@
         <input type="url" name="trailer" placeholder="Aqui va la url.." data-validation="url" class="form-control"
             REQUIRED>
     </div>
-    <div class="mb-3">
-        <label class="form-label"><strong>Capturas Del Juego</strong></label>
-        <div id="my-dropzone" class="dropzone">
-            <div class="fallback">
-                <input id="cargarJuego" name="cargarJuego" type="file" multiple />
-            </div>
-        </div>
-    </div>
+    
     <div class="mb-4">
         <label class="form-label"><strong>Requisitos Minimos</strong></label>
         <ul>
@@ -173,4 +166,21 @@
         <button type="reset" class="btn btn-outline-danger">Cancelar</button>
     </div>
 </form>
+<script>
+    $(document).ready(function() {
+    $('#cargarJuego').click(function() {
+        // Segunda función
+        $.ajax({
+            url: 'repo/PHP/crear_archivos.php', // Archivo para la segunda función
+            method: 'POST', // O 'GET' según lo que necesites
+            success: function(response) {
+                console.log('Función 1 ejecutada:', response);
+            },
+            error: function(xhr, status, error) {
+                console.error('Error en Función 1:', error);
+            }
+        });
+    });
+});
+</script>
 <?php include "C:/xampp/htdocs/repo/PHP/include/footer.php"?>

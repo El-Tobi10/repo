@@ -1,4 +1,6 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/PHP/include/header.php";
+$_SESSION['id_juego'] = null;
+?>
 <title>Inicio - BestGamer</title>
 <!-- Gallery -->
 <div class="gallery">
@@ -34,6 +36,7 @@
 <hr class="border border-secundary border-2 opacity-75 mx-3">
 <!--     Main      -->
 <main>
+    <a href="/repo/PHP/crear_archivos.php">crear archivo, ponele</a>
     <div class="container">
         <h2>Los Juegos Mas Populares:</h2>
     </div>

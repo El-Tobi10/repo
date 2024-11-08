@@ -6,12 +6,16 @@
     <form action="../PHP/login/val_ingreso.php" id="formRegister" class="formulario mx-5" method="POST">
         <div class="sm-10 row ">
             <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
-            <input type="text" name="txtmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="name@example.com">
+            <div class="input-group mb-3">
+                <input type="text" name="txtmail" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="name@example.com">
+            </div>
         </div>
         <div class="sm-10 row">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" name="txtpass" class="form-control" id="exampleInputPassword1">
+            <div class="input-group mb-3">
+                <input type="password" name="txtpass" class="form-control" id="exampleInputPassword1">
+            </div>
         </div>
         <div class="text-center">
             <button type="submit" id="submitButton" class="btn btn-primary mt-3">Aceptar</button>
@@ -23,5 +27,5 @@
     </div>
 </div>
 
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
 <script src="../JS/storage.js"></script>
+<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>

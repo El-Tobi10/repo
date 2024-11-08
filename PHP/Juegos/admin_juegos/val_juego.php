@@ -1,5 +1,6 @@
 <?php
 include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+session_start();
 if(isset($_POST['aceptar'])){
     // Datos Juego
     $titulo = $_POST['titulo'];
@@ -20,7 +21,7 @@ if(isset($_POST['aceptar'])){
     $xbox = $_POST['xbox'];
 
     // imagen de Portada
-    if (isset($_FILES['img_portada'])) {
+    if (!empty($_FILES['img_portada'])) {
         // print_r($_FILES['img_portada']);
         $foto = $_FILES['img_portada'];
         $img_loc = $foto['tmp_name'];
@@ -45,40 +46,41 @@ if(isset($_POST['aceptar'])){
     $link_trailer = $_POST['trailer'];
 
     // Capturas del Juego
-    $nombre_capturas = [];
-    if (isset($_FILES['cargarJuego'])) {
-        print_r($_FILES['cargarJuego']);
-        $cap = $_FILES['cargarJuego'];
-        // $cap_loc = $cap['tmp_name'];
-        $cap_name = $cap['name'];
-        $destino = $img_des + '/capturas';
-        if(!file_exists($destino)){
-            mkdir($destino);
-        }
+    // $nombre_capturas = [];
+    // var_dump($_FILES['cargarJuego[]']);
+    // if (!empty($_FILES['cargarJuego[]'])) {
+    //     print_r($_FILES['cargarJuego[]']);
+    //     $cap = $_FILES['cargarJuego[]'];
+    //     $cap_loc = $cap['tmp_name'];
+    //     $cap_name = $cap['name'];
+    //     $destino = $img_des . '/capturas';
+    //     if(!file_exists($destino)){
+    //         mkdir($destino);
+    //     }
         
-        for ($i = 0; $i < count($cap_name); $i++) {
-            $cap_name = $cap['name'][$i];
-            $cap_loc = $cap['tmp_name'][$i]; 
-            if (move_uploaded_file($cap_loc, $destino .  "/" . basename($cap_name))) {
+    //     for ($i = 0; $i < count($cap_name); $i++) {
+    //         $cap_name = $cap['name'][$i];
+    //         $cap_loc = $cap['tmp_name'][$i]; 
+    //         if (move_uploaded_file($cap_loc, $destino .  "/" . basename($cap_name))) {
 
-                echo "Captura $cap_name subida con éxito.\n";
-                $nombre_capturas[] = $cap_name;
-            } else {
-                echo "Error al cargar la captura $cap_name.\n";
-            }
-        }
+    //             echo "Captura $cap_name subida con éxito.\n";
+    //             $nombre_capturas[] = $cap_name;
+    //         } else {
+    //             echo "Error al cargar la captura $cap_name.\n";
+    //         }
+    //     }
         
-        if (move_uploaded_file($cap_loc, $destino)) {
-            echo "Capturas subidas con exito.\n";
+    //     if (move_uploaded_file($cap_loc, $destino)) {
+    //         echo "Capturas subidas con exito.\n";
             
-        } else {
-            echo "Error al cargar capturas.\n";
-        }
+    //     } else {
+    //         echo "Error al cargar capturas.\n";
+    //     }
 
-    } else {
-        echo "No se ha subido ninguna imagen.";
-    }
-    $total_cap = count($nombre_capturas);
+    // } else {
+    //     echo "No se ha subido ninguna captura.";
+    // }
+    // $total_cap = count($nombre_capturas);
 
     // Requisitos minimos
     $soMin = $_POST['so-min'];
@@ -111,40 +113,43 @@ if(isset($_POST['aceptar'])){
     }
 
     // Ingreso Capturas
-    if ($total_cap > 0) {
-        // $consulta = "INSERT INTO capturas (cap".$i.") VALUES ";
-        // for ($i = 0; $i < $total_cap; $i++) {
-        //     $consulta .= "('" . mysqli_real_escape_string($con, $nombre_capturas[$i]) . "')";
-        //     if ($i < $total_cap - 1) {
-        //         $consulta .= ",";
-        //     }
-        // }
-        // $ins_cap = mysqli_query($con, $consulta);
-        // if (!$ins_cap) {
-        //     die("Error en Capturas: " . mysqli_error($con));
-        // }
-        $stmt = $con->prepare("INSERT INTO capturas (cap1, cap2, cap3, cap4) VALUES (?, ?, ?, ?)");
-        if ($stmt === false) {
-            die("Error en la preparación de la consulta: " . $con->error);
-        }
-        $stmt->bind_param("ssss", $nombre_capturas[0], $nombre_capturas[1], $nombre_capturas[2], $nombre_capturas[3]);
-        if ($stmt->execute()) {
-            echo "Datos insertados correctamente.";
-        } else {
-            echo "Error al insertar datos: " . $stmt->error;
-        }
+    // if ($total_cap > 0) {
+    //     // $consulta = "INSERT INTO capturas (cap".$i.") VALUES ";
+    //     // for ($i = 0; $i < $total_cap; $i++) {
+    //     //     $consulta .= "('" . mysqli_real_escape_string($con, $nombre_capturas[$i]) . "')";
+    //     //     if ($i < $total_cap - 1) {
+    //     //         $consulta .= ",";
+    //     //     }
+    //     // }
+    //     // $ins_cap = mysqli_query($con, $consulta);
+    //     // if (!$ins_cap) {
+    //     //     die("Error en Capturas: " . mysqli_error($con));
+    //     // }
+    //     $stmt = $con->prepare("INSERT INTO capturas (cap1, cap2, cap3, cap4) VALUES (?, ?, ?, ?)");
+    //     if ($stmt === false) {
+    //         die("Error en la preparación de la consulta: " . $con->error);
+    //     }
+    //     $stmt->bind_param("ssss", $nombre_capturas[0], $nombre_capturas[1], $nombre_capturas[2], $nombre_capturas[3]);
+    //     if ($stmt->execute()) {
+    //         echo "Datos insertados correctamente.";
+    //     } else {
+    //         echo "Error al insertar datos: " . $stmt->error;
+    //     }
 
-        $stmt->close();
-    }
+    //     $stmt->close();
+    // }
+    // else{
+    //     die("Error al tomar las capturas.");
+    // }
 
-    $id_cap = mysqli_query($con, "SELECT id_captura FROM capturas ORDER BY id_captura DESC LIMIT 1");
-    $row = mysqli_fetch_assoc($id_cap);
-    if($row > 0){
-        $id_cap = $row['id_captura'];
-    }
-    else{
-        die("Error en Capturas: " . mysqli_error($con));
-    }
+    // $id_cap = mysqli_query($con, "SELECT id_captura FROM capturas ORDER BY id_captura DESC LIMIT 1");
+    // $row = mysqli_fetch_assoc($id_cap);
+    // if($row > 0){
+    //     $id_cap = $row['id_captura'];
+    // }
+    // else{
+    //     die("Error en Capturas: " . mysqli_error($con));
+    // }
     
     // Ingreso Metacritic
     $ins_metac = mysqli_query($con, "INSERT INTO metacritic(score, link) VALUES ('$score', '$link_meta')");
@@ -195,11 +200,12 @@ if(isset($_POST['aceptar'])){
 
     
     // Ingreso General de Juegos
-    $insertar = mysqli_query($con, "INSERT INTO juegos (titulo, lanzamiento, desarrollador, img_portada, descripcion, generos, id_ReqMin, id_ReqRec, link_trailer, id_captura, id_links, id_critic) VALUES ('$titulo', '$lanzamiento', '$desarrollador', '$img_name', '$descripcion','$generos', '$id_reqMin', '$id_reqRec', '$link_trailer', '$id_cap', '$id_compra', '$id_meta')");
+    $insertar = mysqli_query($con, "INSERT INTO juegos (titulo, lanzamiento, desarrollador, img_portada, descripcion, generos, id_ReqMin, id_ReqRec, link_trailer, id_links, id_critic) VALUES ('$titulo', '$lanzamiento', '$desarrollador', '$img_name', '$descripcion','$generos', '$id_reqMin', '$id_reqRec', '$link_trailer', '$id_compra', '$id_meta')");
 
     if (!$insertar) {
         die("Error al insertar el juego: " . mysqli_error($con));
     }
+    
     echo '<script>
             Swal.fire({
                 title: "Registro completado",
@@ -209,7 +215,7 @@ if(isset($_POST['aceptar'])){
                 allowOutsideClick: true
             });
         </script>';
-    //header("Refresh: 2; url=/repo/PHP/index.php");
+    header("Refresh: 2; url=/repo/PHP/pag_juegos1.php");
 }
     else {
         echo '

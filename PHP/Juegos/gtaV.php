@@ -5,10 +5,17 @@
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
         echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
         die();
-    }?>
+    }
+
+    $_SESSION['id_juego'] = 7;
+    $id_juego = $_SESSION['id_juego'];
+    $query = mysqli_query($con, "SELECT * FROM juegos WHERE id_juego = $id_juego");
+    $juego = mysqli_fetch_assoc($query);
+    $img_portada_dir = '/repo/img/juegos/' . pathinfo($juego['img_portada'], PATHINFO_FILENAME). '/capturas';
+    ?>
 <title>Grand Theft Auto V - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
-<h1 class="text-center text-white">Grand Theft Auto V | GTA V</h1>
+<h1 class="text-center text-white">Grand Theft Auto V</h1>
 
 <div class="container">
     <img src="/repo/img/juegos/gtav/grand-theft-auto-v.jpg" alt="" class="img-fluid min-100">
@@ -40,8 +47,8 @@
 <div class="container">
     <h2 class="mt-4">Descripcion del VideoJuego</h2>
     <p>Grand Theft Auto V o GTA V es un juego de acción-aventura de mundo abierto desarrollado por la compañía británica
-        Rockstar North y distribuido por Rockstar Games.</p>
-    <p>Nueve años después de un atraco frustrado en Ludendorff (North Yankton), que dejó a uno de sus perpetrantes
+        Rockstar North y distribuido por Rockstar Games.
+    Nueve años después de un atraco frustrado en Ludendorff (North Yankton), que dejó a uno de sus perpetrantes
         muerto, otro bajo arresto y obligó a un tercero a la clandestinidad, el ex ladrón de bancos, Michael Townley,
         fue tomado como muerto en North Yankton y ha sido puesto bajo protección de testigos por el agente corrupto del
         FIB Dave Norton, amigo íntimo del mismo, trasladándolo así con su familia a Los Santos (San Andreas) con una
@@ -56,45 +63,59 @@
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<div class="container">
-    <h2 class="mt-4">Capturas</h2>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
+<?php 
+    $cap_juego = mysqli_query($con ,"SELECT * FROM capturas WHERE id_juego = '$id_juego'");
+    if(mysqli_num_rows($cap_juego) > 0){
+        $resul_cap_juego = mysqli_fetch_assoc($cap_juego);
+?>
+        <div class="container">
+            <h2 class="mt-4">Capturas</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap1']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap2']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap3']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap4']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="4000">
-                <img src="/repo/img/juegos/gtav/cap1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="/repo/img/juegos/gtav/cap2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap3.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/repo/img/juegos/gtav/cap4.jpg" class="d-block w-100" alt="...">
-            </div>
+<?php} else {?>
+        <div class="container">
+            <h2 class="mt-4">Capturas</h2>
+            <p>No hay capturas disponibles.</p>
+            <?php if(isset($_SESSION['admin'])){?>
+                <button class="btn btn-primary" onclick="window.location.href='/repo/PHP/Juegos/admin_juegos/ingresar_cap.php';">Agregar Capturas</button>
+            <?php }?>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
+<?php }?>
 
 <div class="container">
     <h2 class="mt-4">Compralo aqui</h2>
@@ -172,8 +193,7 @@
             <strong>Memoria RAM: </strong><span style="font-size: inherit;">4 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA 9800 GT 1GB / AMD HD 4870 1GB
-                (DX 10, 10.1, 11)</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA 9800 GT 1GB / AMD HD 4870 1GB(DX 10, 10.1, 11)</span>
         </li>
         <li>
             <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 10</span>
@@ -185,19 +205,16 @@
     <h3 class="mt-2">Recomendados</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,
-                Windows 7 64 Bit Service Pack 1</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows 8.1 64 Bit, Windows 8 64 Bit,Windows 7 64 Bit Service Pack 1</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8
-                FX-8350 @ 4GHZ (8 CPUs)</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8 FX-8350 @ 4GHZ (8 CPUs)</span>
         </li>
         <li>
             <strong>Memoria RAM: </strong><span style="font-size: inherit;">8 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA GTX 660 2GB / AMD HD7870
-                2GB</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">NVIDIA GTX 660 2GB / AMD HD7870 2GB</span>
         </li>
         <li>
             <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"> DirectX 10 compatible</span>

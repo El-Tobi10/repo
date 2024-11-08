@@ -56,21 +56,7 @@
     line-height: 1.4;
 }
 
-#example{
-    vertical-align: middle;
-    align-items: center;
-    justify-self: center;
-}
-.row{
-    justify-content: center;
-}
-
-.text-primary{
-    padding-bottom: 25px;
-}
-span.page-link{
-    cursor: pointer;
-}
-.pagination{
-    justify-content: center;
+tr{
+    display: flex;
+    justify-content: space-between;
 }

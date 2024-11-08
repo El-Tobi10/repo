@@ -23,7 +23,7 @@
         else{
             echo'
                 <script>
-                    alert("Usuario no existe");
+                    alert("El Usuario ingresado no existe no existe");
                     window.location= "../login.php";
                 </script>
             ';
