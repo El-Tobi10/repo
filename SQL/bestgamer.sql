@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-11-2024 a las 04:48:49
+-- Tiempo de generación: 15-11-2024 a las 04:49:13
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,8 +32,20 @@ CREATE TABLE `capturas` (
   `cap1` varchar(200) NOT NULL,
   `cap2` varchar(200) NOT NULL,
   `cap3` varchar(200) NOT NULL,
-  `cap4` varchar(200) NOT NULL
+  `cap4` varchar(200) NOT NULL,
+  `id_juego` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `capturas`
+--
+
+INSERT INTO `capturas` (`id_captura`, `cap1`, `cap2`, `cap3`, `cap4`, `id_juego`) VALUES
+(1, 'Posible_Tatuaje.png', 'Posible_Tatuaje2.png', 'Ryan_Gosling.webp', 'Screenshot_20240126-134624-631.png', 0),
+(2, 'ayudame.jpg', 'b33d6c0e88fbd11972c92c6953e6918f.jpg', 'Captura de pantalla 2024-03-23 011220.png', 'descarga.webp', 0),
+(3, 'Posible_Tatuaje.png', 'Posible_Tatuaje2.png', 'Ryan_Gosling.webp', 'Screenshot_20240126-134624-631.png', 0),
+(4, 'Screenshot_20240126-134624-631.png', 'SilvioMinecraft.jpeg', 'tomy fierro.jpeg', 'UltimaVision.jpg', 0),
+(5, 'LoUltimoDelOjoDerecho.png', 'Posible_Tatuaje.png', 'Posible_Tatuaje2.png', 'Ryan_Gosling.webp', 7);
 
 -- --------------------------------------------------------
 
@@ -84,7 +96,6 @@ CREATE TABLE `juegos` (
   `id_reqMin` int(60) NOT NULL,
   `id_reqRec` int(60) NOT NULL,
   `link_trailer` varchar(200) NOT NULL,
-  `id_captura` int(11) NOT NULL,
   `id_links` int(11) NOT NULL,
   `id_critic` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -93,16 +104,18 @@ CREATE TABLE `juegos` (
 -- Volcado de datos para la tabla `juegos`
 --
 
-INSERT INTO `juegos` (`id_juego`, `titulo`, `lanzamiento`, `desarrollador`, `img_portada`, `descripcion`, `generos`, `id_reqMin`, `id_reqRec`, `link_trailer`, `id_captura`, `id_links`, `id_critic`) VALUES
-(1, 'Prueba1', '2024-01-01', 'Rockstar Games', '', 'vdsbjvbsbvks', 'Accion/Aventura/Carreras', 0, 0, 'https://www.youtube.com/watch?v=yUPwm8ZCJTQ', 0, 0, 0),
-(2, 'Prueba2', '2021-01-20', 'From Software', '', 'Hola, a gaby le gustan los hombres', '2D/Estrategia/Multijugador', 0, 0, 'https://www.youtube.com/watch?v=jPU_uZjbRV4', 0, 0, 0),
-(3, 'Prueba3', '2021-01-20', 'From Software', '', 'Hola, a gaby le gustan los hombres', '2D/Estrategia/Multijugador', 3, 3, 'https://www.youtube.com/watch?v=jPU_uZjbRV4', 0, 0, 0),
-(4, 'Prueba4', '2017-05-11', 'Rockstar Games', '', 'Chuco pelado', 'Estrategia/Guerra/Multijugador/Mundo Abierto', 4, 4, 'https://www.youtube.com/watch?v=fSHoePrnmMw', 0, 0, 0),
-(5, 'Prueba5', '2020-11-26', 'Bethesda Game Studios', 'default.png', 'Chuco pelado', 'Accion/Rol/Simulacion/Supervivencia', 5, 5, 'https://www.youtube.com/watch?v=fSHoePrnmMw', 0, 0, 0),
-(6, 'Hola Que Hace', '2021-05-11', 'Rockstar Games', 'Captura de pantalla 2024-03-23 011220.png', 'Bauti medio raro', 'Accion/Aventura/Terror', 6, 6, 'https://www.youtube.com/watch?v=jPU_uZjbRV4', 0, 0, 0),
-(7, 'Gabi Se La Come', '2018-06-20', 'Rockstar Games', 'Ryan_Gosling.webp', 'Hola buenas', 'Accion/Aventura/Deportes', 7, 7, 'https://www.youtube.com/watch?v=3qXR7dDfZWM&t=633s', 0, 0, 0),
-(8, 'Oni-Chuco (UwU)', '2018-06-20', 'Rockstar Games', 'UltimaVision.jpg', 'Guts, tambíen conocido por su epíteto del \"Espadachín Negro\", es el protagonista de Berserk. Es un antiguo mercenario marcado que viaja por el mundo en una constante lucha interna entre perseguir su venganza y proteger a sus seres queridos.', 'Accion/Aventura/Guerra/Lucha', 8, 8, 'https://www.youtube.com/watch?v=3qXR7dDfZWM&t=633s', 0, 0, 0),
-(9, 'Prueba3000', '2016-07-14', 'From Software', 'SilvioMinecraft.jpeg', 'Agus puto', 'Estrategia/Guerra/Multijugador', 9, 9, 'https://www.youtube.com/watch?v=jYM_UDKCx7U', 0, 0, 0);
+INSERT INTO `juegos` (`id_juego`, `titulo`, `lanzamiento`, `desarrollador`, `img_portada`, `descripcion`, `generos`, `id_reqMin`, `id_reqRec`, `link_trailer`, `id_links`, `id_critic`) VALUES
+(1, 'Prueba1', '2024-01-01', 'Rockstar Games', '', 'vdsbjvbsbvks', 'Accion/Aventura/Carreras', 0, 0, 'https://www.youtube.com/watch?v=yUPwm8ZCJTQ', 0, 0),
+(2, 'Prueba2', '2021-01-20', 'From Software', '', 'Hola, a gaby le gustan los hombres', '2D/Estrategia/Multijugador', 0, 0, 'https://www.youtube.com/watch?v=jPU_uZjbRV4', 0, 0),
+(3, 'Prueba3', '2021-01-20', 'From Software', '', 'Hola, a gaby le gustan los hombres', '2D/Estrategia/Multijugador', 3, 3, 'https://www.youtube.com/watch?v=jPU_uZjbRV4', 0, 0),
+(4, 'Prueba4', '2017-05-11', 'Rockstar Games', '', 'Chuco pelado', 'Estrategia/Guerra/Multijugador/Mundo Abierto', 4, 4, 'https://www.youtube.com/watch?v=fSHoePrnmMw', 0, 0),
+(5, 'Prueba5', '2020-11-26', 'Bethesda Game Studios', 'default.png', 'Chuco pelado', 'Accion/Rol/Simulacion/Supervivencia', 5, 5, 'https://www.youtube.com/watch?v=fSHoePrnmMw', 0, 0),
+(6, 'Hola Que Hace', '2021-05-11', 'Rockstar Games', 'Captura de pantalla 2024-03-23 011220.png', 'Bauti medio raro', 'Accion/Aventura/Terror', 6, 6, 'https://www.youtube.com/watch?v=jPU_uZjbRV4', 0, 0),
+(7, 'Gabi Se La Come', '2018-06-20', 'Rockstar Games', 'Ryan_Gosling.webp', 'Hola buenas', 'Accion/Aventura/Deportes', 7, 7, 'https://www.youtube.com/watch?v=3qXR7dDfZWM&t=633s', 0, 0),
+(8, 'Oni-Chuco (UwU)', '2018-06-20', 'Rockstar Games', 'UltimaVision.jpg', 'Guts, tambíen conocido por su epíteto del \"Espadachín Negro\", es el protagonista de Berserk. Es un antiguo mercenario marcado que viaja por el mundo en una constante lucha interna entre perseguir su venganza y proteger a sus seres queridos.', 'Accion/Aventura/Guerra/Lucha', 8, 8, 'https://www.youtube.com/watch?v=3qXR7dDfZWM&t=633s', 0, 0),
+(9, 'Prueba3000', '2016-07-14', 'From Software', 'SilvioMinecraft.jpeg', 'Agus puto', 'Estrategia/Guerra/Multijugador', 9, 9, 'https://www.youtube.com/watch?v=jYM_UDKCx7U', 0, 0),
+(10, 'PruebaPaginacion', '2024-11-27', 'From Software', 'guts.jpg', 'Esta es una prueba para la paginacion', 'Shooter/Guerra/Simulacion', 12, 12, 'https://www.youtube.com/watch?v=yUPwm8ZCJTQ', 3, 3),
+(11, 'Grand Theft Auto V', '2014-11-18', 'Rockstar Games', 'grand-theft-auto-v.jpg', 'Grand Theft Auto V o GTA V es un juego de acción-aventura de mundo abierto desarrollado por la compañía británica\r\n        Rockstar North y distribuido por Rockstar Games.\r\n    Nueve años después de un atraco frustrado en Ludendorff (North Yankton), que dejó a uno de sus perpetrantes\r\n        muerto, otro bajo arresto y obligó a un tercero a la clandestinidad, el ex ladrón de bancos, Michael Townley,\r\n        fue tomado como muerto en North Yankton y ha sido puesto bajo protección de testigos por el agente corrupto del\r\n        FIB Dave Norton, amigo íntimo del mismo, trasladándolo así con su familia a Los Santos (San Andreas) con una\r\n        nueva identidad: Michael De Santa.', 'Accion/Aventura/Multijugador/Mundo Abierto', 13, 13, 'https://www.youtube.com/embed/QkkoHAzjnUs', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -117,6 +130,16 @@ CREATE TABLE `linkcompra` (
   `xbox` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `linkcompra`
+--
+
+INSERT INTO `linkcompra` (`id_links`, `steam`, `epic`, `xbox`) VALUES
+(1, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3'),
+(2, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3'),
+(3, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3'),
+(4, 'https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/', 'https://store.epicgames.com/es-ES/p/grand-theft-auto-v', 'https://www.xbox.com/es-ar/games/store/grand-theft-auto-v-edicion-premium/c496clvxmjp8');
+
 -- --------------------------------------------------------
 
 --
@@ -128,6 +151,16 @@ CREATE TABLE `metacritic` (
   `score` smallint(6) NOT NULL,
   `link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `metacritic`
+--
+
+INSERT INTO `metacritic` (`id_critic`, `score`, `link`) VALUES
+(1, 95, 'https://www.metacritic.com/game/dragon-age-the-veilguard/'),
+(2, 95, 'https://www.metacritic.com/game/dragon-age-the-veilguard/'),
+(3, 95, 'https://www.metacritic.com/game/dragon-age-the-veilguard/'),
+(4, 97, 'https://www.metacritic.com/game/grand-theft-auto-v/');
 
 -- --------------------------------------------------------
 
@@ -158,7 +191,11 @@ INSERT INTO `requisitos_minimos` (`id_reqMin`, `so`, `proce`, `ram`, `video`, `a
 (6, 'Windows 11', 'i3 or higher', 4, 'GeForce 960', 'Directx 11', 26),
 (7, 'Windows 10 or higher', 'i3 or higher', 4, 'GeForce 4060', 'Directx 11', 4),
 (8, 'Windows 10 or higher', 'i3 or higher', 4, 'GeForce 4060', 'Directx 11', 4),
-(9, 'Windows 10 or higher', 'i3 or higher', 4, 'GeForce 4060', 'Directx 11', 5);
+(9, 'Windows 10 or higher', 'i3 or higher', 4, 'GeForce 4060', 'Directx 11', 5),
+(10, 'Windows 10 or higher', 'Ryzen 7', 4, 'GeForce 4060', 'Directx 12', 25),
+(11, 'Windows 10 or higher', 'Ryzen 7', 4, 'GeForce 4060', 'Directx 12', 25),
+(12, 'Windows 10 or higher', 'Ryzen 7', 4, 'GeForce 4060', 'Directx 12', 25),
+(13, 'Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Servi', 'Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom ', 4, 'NVIDIA 9800 GT 1GB / AMD HD 4870 1GB(DX 10, 10.1, 11)', 'DirectX 10', 65);
 
 -- --------------------------------------------------------
 
@@ -189,7 +226,11 @@ INSERT INTO `requisitos_recomendados` (`id_reqRec`, `so`, `proce`, `ram`, `video
 (6, 'Windows 11', 'Ryzen 7', 8, 'GeForce 4060', 'Directx 11', 26),
 (7, 'Windows 10 or higher', 'i3 or higher', 4, 'GeForce 4060', 'Directx 12', 4),
 (8, 'Windows 10 or higher', 'i3 or higher', 4, 'GeForce 4060', 'Directx 12', 4),
-(9, 'Windows 10 or higher', 'i3 or higher', 8, 'GeForce 4060', 'Directx 11', 56);
+(9, 'Windows 10 or higher', 'i3 or higher', 8, 'GeForce 4060', 'Directx 11', 56),
+(10, 'Windows 11', 'Ryzen 7', 8, 'GeForce 4060', 'Directx 12', 25),
+(11, 'Windows 11', 'Ryzen 7', 8, 'GeForce 4060', 'Directx 12', 25),
+(12, 'Windows 11', 'Ryzen 7', 8, 'GeForce 4060', 'Directx 12', 25),
+(13, 'Windows 8.1 64 Bit, Windows 8 64 Bit,Windows 7 64 Bit Servic', 'Intel Core i5 3470 @ 3.2GHZ (4 CPUs) / AMD X8 FX-8350 @ 4GHZ', 8, 'NVIDIA GTX 660 2GB / AMD HD7870 2GB', 'DirectX 10 compatible', 65);
 
 -- --------------------------------------------------------
 
@@ -229,11 +270,13 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `mail`, `usuario`, `contrasenia`, `id_rol`) VALUES
-(1, 'tobias@123.com', 'tobi', '123', 2),
+(1, 'tobias@123.com', 'daniel', '123', 2),
 (2, 'tobias@hotmail.com', 'el-tobi123', '123', 2),
 (3, 'agus@123.com', 'agusLame', 'si123', 2),
 (4, 'tobiasalfonso@outlook.com', 'El_Tobi10', '230110', 2),
-(8, 'tobias@bestgamer.com', 'GabyPutooo', '1234', 1);
+(8, 'tobias@bestgamer.com', 'Tobias_10', '1234', 1),
+(9, 'soychuconeitor@skibidymail', 'lautiUWU', '12345678', 2),
+(10, 'anana@nazi.com', 'seuz', 'agusselacome', 2);
 
 --
 -- Índices para tablas volcadas
@@ -243,7 +286,8 @@ INSERT INTO `usuarios` (`id_usuario`, `mail`, `usuario`, `contrasenia`, `id_rol`
 -- Indices de la tabla `capturas`
 --
 ALTER TABLE `capturas`
-  ADD PRIMARY KEY (`id_captura`);
+  ADD PRIMARY KEY (`id_captura`),
+  ADD KEY `id_juego` (`id_juego`);
 
 --
 -- Indices de la tabla `juegos`
@@ -252,7 +296,6 @@ ALTER TABLE `juegos`
   ADD PRIMARY KEY (`id_juego`),
   ADD KEY `id_ReqMin` (`id_reqMin`),
   ADD KEY `id_ReqRec` (`id_reqRec`),
-  ADD KEY `id_captura` (`id_captura`),
   ADD KEY `id_links` (`id_links`),
   ADD KEY `id_critic` (`id_critic`);
 
@@ -301,37 +344,37 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `capturas`
 --
 ALTER TABLE `capturas`
-  MODIFY `id_captura` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_captura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `juegos`
 --
 ALTER TABLE `juegos`
-  MODIFY `id_juego` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_juego` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `linkcompra`
 --
 ALTER TABLE `linkcompra`
-  MODIFY `id_links` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_links` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `metacritic`
 --
 ALTER TABLE `metacritic`
-  MODIFY `id_critic` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_critic` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `requisitos_minimos`
 --
 ALTER TABLE `requisitos_minimos`
-  MODIFY `id_reqMin` int(60) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_reqMin` int(60) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `requisitos_recomendados`
 --
 ALTER TABLE `requisitos_recomendados`
-  MODIFY `id_reqRec` int(60) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_reqRec` int(60) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -343,7 +386,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_usuario` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
