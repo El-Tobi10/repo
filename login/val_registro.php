@@ -1,5 +1,5 @@
 <?php 
-	include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+	include "C:/xampp/htdocs/repo/conexion/conexion.php";
 	if(isset($_POST['agregar'])){
         $mail = $_POST['txtmail'];
         $user = $_POST['txtuser'];

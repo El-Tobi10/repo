@@ -1,12 +1,12 @@
     <footer>
         <div class="row">
             <div class="col d-flex justify-content-center align-items-end">
-                <a href="/repo/PHP/terminos.php"
+                <a href="/repo/terminos.php"
                     class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover">Terminos
                     y condiciones</a>
             </div>
             <div class="col">
-                <a href="/repo/PHP/index.php" class="logo navbar-brand justify-content-center"><img
+                <a href="/repo/index.php" class="logo navbar-brand justify-content-center"><img
                         src="/repo/img/logo.jpg" alt="" height="100px" max-width="100px" title="Logo BestGamer"></a>
                 <p class="text-center mt-3">Copyright © <span id="current-year">2024</span> BestGamer.</p>
             </div>
@@ -85,4 +85,4 @@
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
 </body>
     </html>
-    <?php include "C:/xampp/htdocs/repo/PHP/go_top.php"?>
+    <?php include "C:/xampp/htdocs/repo/go_top.php"?>

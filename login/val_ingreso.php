@@ -1,5 +1,5 @@
 <?php 
-    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    include "C:/xampp/htdocs/repo/conexion/conexion.php";
     session_start();
         $user = trim($_POST['txtmail']);
         $pass = trim($_POST['txtpass']);
@@ -10,13 +10,13 @@
         if($filas['id_rol']==1){
             $_SESSION["admin"] = $user;
             $_SESSION["id"] = $filas['id_usuario'];
-            header("location:/repo/PHP/index.php");
+            header("location:/repo/index.php");
             exit();
         }
         else if($filas['id_rol'] == 2){
             $_SESSION["usuario"] = $user;
             $_SESSION["id"] = $filas['id_usuario'];
-            header("location: /repo/PHP/pag_juegos1.php");
+            header("location: /repo/pag_juegos1.php");
             exit();
         }
         

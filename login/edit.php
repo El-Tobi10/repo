@@ -1,4 +1,4 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
 <title>Editar Usuario - BestGamer</title>
 <link rel="stylesheet" href="../CSS/form.css">
 <div class="text-white">
@@ -29,4 +29,4 @@
     </form>
 </div>
 
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php"?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php"?>

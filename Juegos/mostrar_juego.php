@@ -1,32 +1,38 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
 <?php
-    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    include "C:/xampp/htdocs/repo/conexion/conexion.php";
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
-        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
-    }?>
-<title>Borderlands 2 - BestGamer</title>
+    }
+    $id_juego = $_GET["id"];
+    $_SESSION["id_juego"] = $id_juego;
+    $query = mysqli_query($con, "SELECT * FROM juegos WHERE id_juego = $id_juego");
+    while($juego = mysqli_fetch_array($query)){
+        $img_portada_dir = '/repo/img/juegos/' . pathinfo($juego['img_portada'], PATHINFO_FILENAME). '/capturas';
+    ?>
+<?php include "C:/xampp/htdocs/repo/Juegos/boton_editar.php"?>
+<title><?php echo $juego["titulo"];?> - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
-<h1 class="text-center text-white">Borderlands 2</h1>
+<h1 class="text-center text-white"><?php echo $juego["titulo"];?></h1>
 
 <div class="container">
-    <img src="/repo/img/juegos/Borderlands2/horizontal.jpg" alt="" class="img-fluid min-100">
+    <img src="/repo/img/juegos/<?php echo pathinfo($juego['img_portada'], PATHINFO_FILENAME) . "/" . $juego['img_portada']?>" alt="" class="img-fluid min-100">
     <div class="bottom">
         <details>
             <summary>Detalles Generales</summary>
-            <p><strong>Generos</strong>: Acción, Aventura, Mundo abierto, Multijugador</p>
-            <p><strong>Desarrollador</strong>: Gearbox Software</p>
-            <p><strong>Lanzamiento</strong>: 2012-09-18</p>
+            <p><strong>Generos</strong>: <?php echo str_replace("/",", ",$juego["generos"]);?></p>
+            <p><strong>Desarrollador</strong>: <?php echo $juego["desarrollador"];?></p>
+            <p><strong>Lanzamiento</strong>: <?php echo $juego["lanzamiento"];?></p>
         </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
-                <div class="score high">89</div>
+                <div class="score high">xx</div>
                 <div class="logo"></div>
                 <div class="wordmark">
                     <div class="metacritic">metacritic</div>
                     <div id="game_area_metalink">
-                        <a href="https://www.metacritic.com/game/borderlands-2/" class="link-info"
+                        <a href="#" class="link-info"
                             target="_blank">Leer las reseñas</a> <img
                             src="https://store.akamai.steamstatic.com/public/images/ico/iconExternalLink.gif">
                     </div>
@@ -39,76 +45,92 @@
 
 <div class="container">
     <h2 class="mt-4">Descripcion del VideoJuego</h2>
-    <p>Una nueva era de disparos y saqueos está a punto de comenzar. Juega como uno de los cuatro nuevos buscadores de la Cámara y enfréntate a legiones de nuevas criaturas, psicópatas y al villano que las controla, Jack el Guapo. Haz nuevos amigos, equípalos con un cillón de armas y pelea a su lado en partidas cooperativas de 4 jugadores, en una implacable búsqueda de venganza y redención a través de un desconocido e impredecible planeta.</p>
+    <p><?php echo $juego["descripcion"];?></p>
 </div>
 
 <div class="container">
     <h2 class="mt-4">Gameplay/Trailer</h2>
-    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/5TW0wJTFLiw" title="Borderlands 2 - Launch Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="<?php echo $juego["link_trailer"];?>"      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<div class="container">
-    <h2 class="mt-4">Capturas</h2>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
+<?php 
+    $cap_juego = mysqli_query($con ,"SELECT * FROM capturas WHERE id_juego = '$id_juego'");
+    if(mysqli_num_rows($cap_juego) > 0){
+        $resul_cap_juego = mysqli_fetch_assoc($cap_juego);
+?>
+        <div class="container">
+            <h2 class="mt-4">Capturas</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap1']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap2']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap3']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="<?php echo $img_portada_dir ."/". $resul_cap_juego['cap4']; ?>" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="4000">
-                <img src="/repo/img/juegos/Borderlands2/cap1.jfif" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <img src="/repo/img/juegos/Borderlands2/cap2.jfif" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/repo/img/juegos/Borderlands2/cap3.jfif" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/repo/img/juegos/Borderlands2/cap4.jfif" class="d-block w-100" alt="...">
-            </div>
+<?php } else { ?>
+        <div class="container">
+            <h2 class="mt-4">Capturas</h2>
+            <p>No hay capturas disponibles.</p>
+            <?php if(isset($_SESSION['admin'])){?>
+                <a href="/repo/Juegos/admin_juegos/ingresar_cap.php?id=<?php echo $id_juego; ?>">
+                    <button class="btn btn-primary">Agregar Capturas</button>
+                </a>
+            <?php }?>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
+<?php };?>
 
 <div class="container">
     <h2 class="mt-4">Compralo aqui</h2>
     <div class="row">
         <div class="col compra steam ">
-            <a href="https://store.steampowered.com/app/49520/Borderlands_2/" rel="nofollow noopener noreferrer"
+            <a href="#" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/steam.png"
                         alt="Logo steam, Steam, juegos, compra videojuegos">
-                    <i class="bi bi-steam">Steam</i>
+                    Steam
                 </div>
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $19.99
+                            $
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra epic ">
-            <a href="https://store.epicgames.com/es-ES/bundles/borderlands-the-handsome-collection" rel="nofollow noopener noreferrer"
+            <a href="#" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/logo_epic.svg"
@@ -118,14 +140,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $59.99
+                            $
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra micro">
-            <a href="https://www.xbox.com/en-us/games/store/borderlands-the-handsome-collection/c4dqhrnn1zn5"
+            <a href="#"
                 rel="nofollow noopener noreferrer" target="_blank">
                 <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logoCompra" fill="currentColor" class="bi bi-xbox"
@@ -138,7 +160,7 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $39.99
+                            $
                         </div>
                     </div>
                 </div>
@@ -152,46 +174,47 @@
     <h3 class="mt-2">Minimos</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows XP SP3</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Dual Core a 2.4 GHz</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">2 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;"> GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"> nVidia GeForce 8500 / ATI Radeon HD 2600 </span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 9.0c</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">13 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;"> GB</span>
         </li>
     </ul>
     <h3 class="mt-2">Recomendados</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows XP SP3 / Vista / Win 7</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">nVidia GeForce GTX 560 / ATI Radeon HD 5850</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">2 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;"> GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">nVidia GeForce GTX 560 / ATI Radeon HD 5850</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 9.0c</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"></span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">20 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;"> GB</span>
         </li>
     </ul>
 </div>
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -233,6 +256,8 @@
         </div>
     </div>
 </div>
+</div>
 
 
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php"; 
+}?>

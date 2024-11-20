@@ -1,31 +1,12 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
 <?php
-    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
-        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
     }
     ?>
 <title>Juegos - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/pag_juegos.css">
-
-<!-- <div class="card-header text-center"><strong>Listado de juegos </strong></div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Titulo</th>
-            <th>desarrollador</th>
-            <th>Foto</th>
-            <th>link_trailer</th>
-            <th>generos</th>
-            <th>lanzamiento</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        
-    </tbody>
-</table> -->
 <?php
     // Número de juegos por página
     $limite = 9;
@@ -58,7 +39,7 @@
                     <td class= mx-auto>
                         <div class="col-4">
                             <div class="carta">
-                                <a href="/repo/PHP/Juegos/'. trim($row['titulo']) . '.php">
+                                <a href="/repo/Juegos/mostrar_juego.php?id='. $row['id_juego'] .'">
                                     <img src="/repo/img/juegos/' . pathinfo($row["img_portada"], PATHINFO_FILENAME). '/' . $row["img_portada"] . '" alt="Portada de juego" class="img">
                                     <div class="card__content">
                                         <p class="card__title">' . $row["titulo"] . '</p>
@@ -106,4 +87,4 @@
 <script>
 new DataTable('#example');
 </script>
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php"?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php"?>

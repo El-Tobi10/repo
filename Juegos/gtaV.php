@@ -1,9 +1,9 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/Juegos/boton_editar.php"?>
 <?php
-    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    include "C:/xampp/htdocs/repo/conexion/conexion.php";
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
-        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
     }
 
@@ -112,7 +112,7 @@
             <h2 class="mt-4">Capturas</h2>
             <p>No hay capturas disponibles.</p>
             <?php if(isset($_SESSION['admin'])){?>
-                <button class="btn btn-primary" onclick="window.location.href='/repo/PHP/Juegos/admin_juegos/ingresar_cap.php';">Agregar Capturas</button>
+                <button class="btn btn-primary" onclick="window.location.href='/repo/Juegos/admin_juegos/ingresar_cap.php';">Agregar Capturas</button>
             <?php }?>
         </div>
 <?php }?>
@@ -273,4 +273,4 @@
 </div>
 
 
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php" ?>

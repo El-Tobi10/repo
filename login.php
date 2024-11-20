@@ -1,9 +1,9 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
 <title>Login - BestGamer</title>
-<link rel="stylesheet" href="../CSS/form.css">
+<link rel="stylesheet" href="CSS/form.css">
 <div class="text-white">
     <h2 class="text-center">Iniciar Sesion</h2>
-    <form action="../PHP/login/val_ingreso.php" id="formRegister" class="formulario mx-5" method="POST">
+    <form action="login/val_ingreso.php" id="formRegister" class="formulario mx-5" method="POST">
         <div class="sm-10 row ">
             <label for="exampleInputEmail1" class="form-label">Ingrese su Email</label>
             <div class="input-group mb-3">
@@ -23,9 +23,9 @@
         </div>
     </form>
     <div class="text-center mb-3 ">
-        Si no tienes cuenta puedes registrarte aqui<a href="/repo/PHP/register.php"><kbd>Regístrarte</kbd></a>
+        Si no tienes cuenta puedes registrarte aqui<a href="/repo/register.php"><kbd>Regístrarte</kbd></a>
     </div>
 </div>
 
-<script src="../JS/storage.js"></script>
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<script src="JS/storage.js"></script>
+<?php include "C:/xampp/htdocs/repo/include/footer.php" ?>

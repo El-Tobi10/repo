@@ -1,7 +1,7 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
 <?php
     if(!isset($_SESSION['admin'])){
-        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
     }?>
 
@@ -171,7 +171,7 @@
     $('#cargarJuego').click(function() {
         // Segunda función
         $.ajax({
-            url: 'repo/PHP/crear_archivos.php', // Archivo para la segunda función
+            url: 'repo/crear_archivos.php', // Archivo para la segunda función
             method: 'POST', // O 'GET' según lo que necesites
             success: function(response) {
                 console.log('Función 1 ejecutada:', response);
@@ -183,4 +183,4 @@
     });
 });
 </script>
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php"?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php"?>

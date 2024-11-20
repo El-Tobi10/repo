@@ -1,5 +1,5 @@
 <?php
-include('C:/xampp/htdocs/repo/PHP/conexion/conexion.php');
+include('C:/xampp/htdocs/repo/conexion/conexion.php');
 session_start();
 
 $id_juego = $_SESSION['id_juego'];

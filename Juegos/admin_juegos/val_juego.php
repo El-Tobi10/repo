@@ -1,5 +1,5 @@
 <?php
-include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+include "C:/xampp/htdocs/repo/conexion/conexion.php";
 session_start();
 if(isset($_POST['aceptar'])){
     // Datos Juego
@@ -215,7 +215,7 @@ if(isset($_POST['aceptar'])){
                 allowOutsideClick: true
             });
         </script>';
-    header("Refresh: 2; url=/repo/PHP/pag_juegos1.php");
+    header("Refresh: 2; url=/repo/pag_juegos1.php");
 }
     else {
         echo '

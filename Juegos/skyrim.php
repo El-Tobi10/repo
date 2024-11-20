@@ -1,9 +1,9 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/Juegos/boton_editar.php"?>
 <?php
-    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    include "C:/xampp/htdocs/repo/conexion/conexion.php";
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
-        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
     }?>
 <title>The Elder Scrolls V: Skyrim - BestGamer</title>
@@ -215,4 +215,4 @@
     </div>
 </div>
 <script src="/repo/JS/stars.js"></script>
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php" ?>

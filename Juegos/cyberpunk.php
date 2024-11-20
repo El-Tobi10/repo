@@ -1,32 +1,33 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/Juegos/boton_editar.php"?>
 <?php
-    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    include "C:/xampp/htdocs/repo/conexion/conexion.php";
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
-        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
     }?>
-<title>Red Dead Redemption 2 - BestGamer</title>
+<title>Cyberpunk 2077 - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
-<h1 class="text-center text-white">Red Dead Redemption 2</h1>
+<h1 class="text-center text-white">Cyberpunk 2077</h1>
 
 <div class="container">
-    <img src="/repo/img/juegos/RDR2/red-dead-redemption-2-horizontal.jpg" alt="" class="img-fluid min-100">
+    <img src="/repo/img/juegos/cp2077/cyberpunk-2077-horizontal.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
+        <span id="generos">Accion, Aventura, Mundo Abierto, Rol, Shooter, Simulacion, Ciberpunk</span>
         <details>
             <summary>Detalles Generales</summary>
-            <p><strong>Generos</strong>: Acción, Aventura, Mundo abierto, Western</p>
-            <p><strong>Desarrollador</strong>: Rockstar Games</p>
-            <p><strong>Lanzamiento</strong>: 2018-10-26</p>
+            <p><strong>Generos</strong>: Accion, Aventura, Mundo Abierto, Rol, Shooter, Simulacion, Ciberpunk</p>
+            <p><strong>Desarrollador</strong>: CD Projekt Red</p>
+            <p><strong>Lanzamiento</strong>: 2020-12-10</p>
         </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
-                <div class="score high">97</div>
+                <div class="score high">86</div>
                 <div class="logo"></div>
                 <div class="wordmark">
                     <div class="metacritic">metacritic</div>
                     <div id="game_area_metalink">
-                        <a href="https://www.metacritic.com/game/red-dead-redemption-2/" class="link-info"
+                        <a href="https://www.metacritic.com/game/cyberpunk-2077/" class="link-info"
                             target="_blank">Leer las reseñas</a> <img
                             src="https://store.akamai.steamstatic.com/public/images/ico/iconExternalLink.gif">
                     </div>
@@ -39,14 +40,12 @@
 
 <div class="container">
     <h2 class="mt-4">Descripcion del VideoJuego</h2>
-    <p>Con más de 175 premios al Juego del año y más de 250 valoraciones 
-        <br> 
-        Red Dead Redemption 2 en la America de 1899 contando la épica historia de Arthur Morgan y la banda de Van der Linde se ven obligados a huir. Con agentes federales y los mejores cazarrecompensas de la nación pisándoles los talones, la banda deberá atracar, robar y luchar para sobrevivir en su camino por el escabroso territorio del corazón de América. Mientras las divisiones internas aumentan y amenazan con separarlos a todos, Arthur deberá elegir entre sus propios ideales y la lealtad a la banda que lo vio crecer.</p>
+    <p>Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en la megalópolis de Night City, donde te pondrás en la piel de un mercenario o una mercenaria ciberpunk y vivirás su lucha a vida o muerte por la supervivencia. Mejorado y con contenido nuevo adicional gratuito. Personaliza tu personaje y tu estilo de juego a medida que aceptas trabajos, te labras una reputación y desbloqueas mejoras. Las relaciones que forjes y las decisiones que tomes darán forma al mundo que te rodea. Aquí nacen las leyendas. ¿Cuál será la tuya?</p>
 </div>
 
 <div class="container">
     <h2 class="mt-4">Gameplay/Trailer</h2>
-    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/F63h3v9QV7w" title="Red Dead Redemption 2: Official Trailer #2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/8X2kIfS6fb8" title="Cyberpunk 2077 – Tráiler oficial del E3 2018" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div class="container">
@@ -66,19 +65,19 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="4000">
-                <img src="/repo/img/juegos/RDR2/cap1.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/repo/img/juegos/RDR2/cap2.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap2.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/RDR2/cap3.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap3.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/RDR2/cap4.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap4.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/RDR2/cap5.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/cp2077/cap5.jfif" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -98,7 +97,7 @@
     <h2 class="mt-4">Compralo aqui</h2>
     <div class="row">
         <div class="col compra steam ">
-            <a href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/" rel="nofollow noopener noreferrer"
+            <a href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/steam.png"
@@ -108,14 +107,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $59.99
+                            $44.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra epic ">
-            <a href="https://store.epicgames.com/es-ES/p/red-dead-redemption-2" rel="nofollow noopener noreferrer"
+            <a href="https://store.epicgames.com/es-ES/p/cyberpunk-2077" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/logo_epic.svg"
@@ -125,14 +124,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $59.99
+                            $49.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra micro">
-            <a href="https://www.xbox.com/en-US/games/store/red-dead-redemption-2/9N2ZDN7NWQKV/0010"
+            <a href="https://www.xbox.com/en-us/games/store/cyberpunk-2077/bx3m8l83bbrw"
                 rel="nofollow noopener noreferrer" target="_blank">
                 <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logoCompra" fill="currentColor" class="bi bi-xbox"
@@ -159,46 +158,47 @@
     <h3 class="mt-2">Minimos</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"> Windows 10 - 64-bit</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">64-bit Windows 10</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;"> Intel® Core™ i5-2500K / AMD FX-6300</span>
-        </li>
-        <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">8 GB</span>
-        </li>
-        <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB</span>
-        </li>
-        <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">Direct X Compatible</span>
-        </li>
-        <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">150 GB</span>
-        </li>
-    </ul>
-    <h3 class="mt-2">Recomendados</h3>
-    <ul>
-        <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"> Windows 10 - 64-bit</span>
-        </li>
-        <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Intel® Core™ i7-4770K / AMD Ryzen 5 1500X</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Core i7-6700 or Ryzen 5 1600</span>
         </li>
         <li>
             <strong>Memoria RAM: </strong><span style="font-size: inherit;">12 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380</span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">Direct X Compatible</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX Version 12</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">150 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">70 GB</span>
+        </li>
+    </ul>
+    <h3 class="mt-2">Recomendados</h3>
+    <ul>
+        <li>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">64-bit Windows 10</span>
+        </li>
+        <li>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Core i7-12700 or Ryzen 7 7800X3D</span>
+        </li>
+        <li>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">16 GB</span>
+        </li>
+        <li>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">GeForce RTX 2060 SUPER or Radeon RX 5700 XT or Arc A770</span>
+        </li>
+        <li>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX Version 12</span>
+        </li>
+        <li>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">70 GB</span>
         </li>
     </ul>
 </div>
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -242,4 +242,4 @@
 </div>
 
 
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php" ?>

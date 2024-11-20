@@ -1,4 +1,4 @@
-<?php include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+<?php include "C:/xampp/htdocs/repo/conexion/conexion.php";
 session_start();?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@ session_start();?>
     <header class="header" data-bs-theme="dark">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a href="/repo/PHP/index.php" class="navbar-brand me-3 logo ">
+                <a href="/repo/index.php" class="navbar-brand me-3 logo ">
                     <img src="/repo/img/logo.jpg" alt="" height="100px" max-width="100px" title="Logo BestGamer">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,7 +42,7 @@ session_start();?>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item op">
-                            <a class="nav-link" aria-current="page" href="/repo/PHP/index.php">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="/repo/index.php">Inicio</a>
                         </li>
                         <li class="nav-item dropdown op">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -126,8 +126,12 @@ session_start();?>
 
                         $stmt->close();
                         ?>
-                    <a href="/repo/PHP/Juegos/admin_juegos/ingreso_juegos.php"><button class="inicioSesion mr-2"
-                            type="button">Ingresar Juego</button></a>
+                    <a href="/repo/Juegos/admin_juegos/ingreso_juegos.php">
+                        <button class="inicioSesion mr-2"type="button">Ingresar Juego</button>
+                    </a>
+                    <a href="/repo/admin_usuarios.php">
+                        <button class="inicioSesion mr-2"type="button">Administrar Usuarios</button>
+                    </a>
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="dropdown">
@@ -136,9 +140,9 @@ session_start();?>
                                 Hola ". $user ."
                             </a>";?>
                             <ul class="dropdown-menu ">
-                                <li><a href="/repo/PHP/login/edit.php" class="dropdown-item">Editar
+                                <li><a href="/repo/login/edit.php" class="dropdown-item">Editar
                                 Nombre</a></li>
-                                <li><a href="/repo/PHP/login/logout.php" class="dropdown-item">Cerrar
+                                <li><a href="/repo/login/logout.php" class="dropdown-item">Cerrar
                                         Sesión</a></li>
                             </ul>
                         </li>
@@ -167,15 +171,15 @@ session_start();?>
                                 Hola ". $user ."
                             </a>";?>
                             <ul class="dropdown-menu ">
-                                <li><a href="/repo/PHP/login/edit.php" class="dropdown-item">Editar
+                                <li><a href="/repo/login/edit.php" class="dropdown-item">Editar
                                         Nombre</a></li>
-                                <li><a href="/repo/PHP/login/logout.php" class="dropdown-item">Cerrar
+                                <li><a href="/repo/login/logout.php" class="dropdown-item">Cerrar
                                         Sesión</a></li>
                             </ul>
                         </li>
                     </ul>
                     <?php } else {?>
-                    <a href="/repo/PHP/login.php"><button class="inicioSesion" type="button">Iniciar sesión</button></a>
+                    <a href="/repo/login.php"><button class="inicioSesion" type="button">Iniciar sesión</button></a>
                     <?php }?>
                 </div>
             </div>

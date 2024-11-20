@@ -1,4 +1,4 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php";
+<?php include "C:/xampp/htdocs/repo/include/header.php";
 $_SESSION['id_juego'] = null;
 ?>
 <title>Inicio - BestGamer</title>
@@ -36,14 +36,13 @@ $_SESSION['id_juego'] = null;
 <hr class="border border-secundary border-2 opacity-75 mx-3">
 <!--     Main      -->
 <main>
-    <a href="/repo/PHP/crear_archivos.php">crear archivo</a>
     <div class="container">
         <h2>Los Juegos Mas Populares:</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-4 juegos">
         <div class="col">
             <div class="card juego">
-                <a href="/repo/PHP/Juegos/gtaV.php">
+                <a href="/repo/Juegos/gtaV.php">
                     <img src="/repo/img/juegos/gtav/gtaV.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -53,7 +52,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="/repo/PHP/Juegos/skyrim.php">
+                <a href="/repo/Juegos/skyrim.php">
                     <img src="/repo/img/juegos/skyrim/Skyrim.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -63,7 +62,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="../PHP/Juegos/RDR2.php">
+                <a href="../Juegos/RDR2.php">
                     <img src="/repo/img/juegos/RDR2/RDR2.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -73,7 +72,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="../PHP/Juegos/borderlands2.php">
+                <a href="../Juegos/borderlands2.php">
                     <img src="/repo/img/juegos/Borderlands2/Borderlands2.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -85,7 +84,7 @@ $_SESSION['id_juego'] = null;
     <div class="row row-cols-1 row-cols-md-4 justify-content-center juegos">
         <div class="col">
             <div class="card juego">
-                <a href="../PHP/Juegos/cyberpunk.php">
+                <a href="../Juegos/cyberpunk.php">
                     <img src="/repo/img/juegos/cp2077/Cyberpunk-2077-portada.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -116,7 +115,7 @@ $_SESSION['id_juego'] = null;
         
     </div>
     <div class="d-grid gap-2 col-6 mx-auto">
-        <a href="/repo/PHP/pag_juegos1.php" class="btn active boton" aria-pressed="true">Ver Mas</a>
+        <a href="/repo/pag_juegos1.php" class="btn active boton" aria-pressed="true">Ver Mas</a>
     </div>
     <hr class="border border-secundary border-2 opacity-75 mx-3">
     <h2 class="container text-center mt-4">Preguntas frecuentes</h2>
@@ -174,4 +173,4 @@ $_SESSION['id_juego'] = null;
     </div>
 </div>
 </main>
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php" ?>

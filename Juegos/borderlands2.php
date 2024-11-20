@@ -1,33 +1,32 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
-<?php include "C:/xampp/htdocs/repo/PHP/Juegos/boton_editar.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/Juegos/boton_editar.php"?>
 <?php
-    include "C:/xampp/htdocs/repo/PHP/conexion/conexion.php";
+    include "C:/xampp/htdocs/repo/conexion/conexion.php";
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
-        echo "<script language=javascript> location.href='/repo/PHP/login.php';</script>";
+        echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
     }?>
-<title>Cyberpunk 2077 - BestGamer</title>
+<title>Borderlands 2 - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
-<h1 class="text-center text-white">Cyberpunk 2077</h1>
+<h1 class="text-center text-white">Borderlands 2</h1>
 
 <div class="container">
-    <img src="/repo/img/juegos/cp2077/cyberpunk-2077-horizontal.jpg" alt="" class="img-fluid min-100">
+    <img src="/repo/img/juegos/Borderlands2/horizontal.jpg" alt="" class="img-fluid min-100">
     <div class="bottom">
-        <span id="generos">Accion, Aventura, Mundo Abierto, Rol, Shooter, Simulacion, Ciberpunk</span>
         <details>
             <summary>Detalles Generales</summary>
-            <p><strong>Generos</strong>: Accion, Aventura, Mundo Abierto, Rol, Shooter, Simulacion, Ciberpunk</p>
-            <p><strong>Desarrollador</strong>: CD Projekt Red</p>
-            <p><strong>Lanzamiento</strong>: 2020-12-10</p>
+            <p><strong>Generos</strong>: Acción, Aventura, Mundo abierto, Multijugador</p>
+            <p><strong>Desarrollador</strong>: Gearbox Software</p>
+            <p><strong>Lanzamiento</strong>: 2012-09-18</p>
         </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
-                <div class="score high">86</div>
+                <div class="score high">89</div>
                 <div class="logo"></div>
                 <div class="wordmark">
                     <div class="metacritic">metacritic</div>
                     <div id="game_area_metalink">
-                        <a href="https://www.metacritic.com/game/cyberpunk-2077/" class="link-info"
+                        <a href="https://www.metacritic.com/game/borderlands-2/" class="link-info"
                             target="_blank">Leer las reseñas</a> <img
                             src="https://store.akamai.steamstatic.com/public/images/ico/iconExternalLink.gif">
                     </div>
@@ -40,12 +39,12 @@
 
 <div class="container">
     <h2 class="mt-4">Descripcion del VideoJuego</h2>
-    <p>Cyberpunk 2077 es un RPG de aventura y acción de mundo abierto ambientado en la megalópolis de Night City, donde te pondrás en la piel de un mercenario o una mercenaria ciberpunk y vivirás su lucha a vida o muerte por la supervivencia. Mejorado y con contenido nuevo adicional gratuito. Personaliza tu personaje y tu estilo de juego a medida que aceptas trabajos, te labras una reputación y desbloqueas mejoras. Las relaciones que forjes y las decisiones que tomes darán forma al mundo que te rodea. Aquí nacen las leyendas. ¿Cuál será la tuya?</p>
+    <p>Una nueva era de disparos y saqueos está a punto de comenzar. Juega como uno de los cuatro nuevos buscadores de la Cámara y enfréntate a legiones de nuevas criaturas, psicópatas y al villano que las controla, Jack el Guapo. Haz nuevos amigos, equípalos con un cillón de armas y pelea a su lado en partidas cooperativas de 4 jugadores, en una implacable búsqueda de venganza y redención a través de un desconocido e impredecible planeta.</p>
 </div>
 
 <div class="container">
     <h2 class="mt-4">Gameplay/Trailer</h2>
-    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/8X2kIfS6fb8" title="Cyberpunk 2077 – Tráiler oficial del E3 2018" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="https://www.youtube.com/embed/5TW0wJTFLiw" title="Borderlands 2 - Launch Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div class="container">
@@ -60,24 +59,19 @@
                 aria-label="Slide 3"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
                 aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="4000">
-                <img src="/repo/img/juegos/cp2077/cap1.jpg" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap1.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="/repo/img/juegos/cp2077/cap2.jfif" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap2.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/cp2077/cap3.jfif" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap3.jfif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/repo/img/juegos/cp2077/cap4.jfif" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="/repo/img/juegos/cp2077/cap5.jfif" class="d-block w-100" alt="...">
+                <img src="/repo/img/juegos/Borderlands2/cap4.jfif" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -97,7 +91,7 @@
     <h2 class="mt-4">Compralo aqui</h2>
     <div class="row">
         <div class="col compra steam ">
-            <a href="https://store.steampowered.com/app/1091500/Cyberpunk_2077/" rel="nofollow noopener noreferrer"
+            <a href="https://store.steampowered.com/app/49520/Borderlands_2/" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/steam.png"
@@ -107,14 +101,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $44.99
+                            $19.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra epic ">
-            <a href="https://store.epicgames.com/es-ES/p/cyberpunk-2077" rel="nofollow noopener noreferrer"
+            <a href="https://store.epicgames.com/es-ES/bundles/borderlands-the-handsome-collection" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/logo_epic.svg"
@@ -124,14 +118,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $49.99
+                            $59.99
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra micro">
-            <a href="https://www.xbox.com/en-us/games/store/cyberpunk-2077/bx3m8l83bbrw"
+            <a href="https://www.xbox.com/en-us/games/store/borderlands-the-handsome-collection/c4dqhrnn1zn5"
                 rel="nofollow noopener noreferrer" target="_blank">
                 <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logoCompra" fill="currentColor" class="bi bi-xbox"
@@ -139,12 +133,12 @@
                         <path
                             d="M7.202 15.967a8 8 0 0 1-3.552-1.26c-.898-.585-1.101-.826-1.101-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33m-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.101.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.4 8.4 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.5 9.5 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4 4 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.8 7.8 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12 12 0 0 1-.654-.319Z" />
                     </svg>
-                    <i class="bi bi-xbox">Xbox</i>
+                    Xbox
                 </div>
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $59.99
+                            $39.99
                         </div>
                     </div>
                 </div>
@@ -158,47 +152,46 @@
     <h3 class="mt-2">Minimos</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">64-bit Windows 10</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows XP SP3</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Core i7-6700 or Ryzen 5 1600</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">Dual Core a 2.4 GHz</span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">12 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">2 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"> nVidia GeForce 8500 / ATI Radeon HD 2600 </span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX Version 12</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 9.0c</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">70 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">13 GB</span>
         </li>
     </ul>
     <h3 class="mt-2">Recomendados</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">64-bit Windows 10</span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;">Windows XP SP3 / Vista / Win 7</span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;">Core i7-12700 or Ryzen 7 7800X3D</span>
+            <strong>Procesador: </strong><span style="font-size: inherit;">nVidia GeForce GTX 560 / ATI Radeon HD 5850</span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;">16 GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;">2 GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">GeForce RTX 2060 SUPER or Radeon RX 5700 XT or Arc A770</span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;">nVidia GeForce GTX 560 / ATI Radeon HD 5850</span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX Version 12</span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;">DirectX 9.0c</span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">70 GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;">20 GB</span>
         </li>
     </ul>
 </div>
-
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -242,4 +235,4 @@
 </div>
 
 
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php" ?>

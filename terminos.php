@@ -1,4 +1,4 @@
-<?php include "C:/xampp/htdocs/repo/PHP/include/header.php"?>
+<?php include "C:/xampp/htdocs/repo/include/header.php"?>
 
 <main class="mx-5">
     <h1 class="text-center">Términos y Condiciones de BestGamer</h1>
@@ -40,4 +40,4 @@
     <h6 class="text-center">Al usar BestGamer, aceptas cumplir con estos Términos y Condiciones.</h6>
 </main>
 
-<?php include "C:/xampp/htdocs/repo/PHP/include/footer.php" ?>
+<?php include "C:/xampp/htdocs/repo/include/footer.php" ?>
