@@ -70,19 +70,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <!-- Custom Js -->
-    <script src="/repo/JS/stars.js"></script>
-    <script src="/repo/JS/year.js"></script>
-    <script src="/repo/JS/go_top.js"></script>
-    <script src="/repo/JS/dropzone.js"></script>
     <!-- Dropzone js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JQuery Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- DataTable Js -->
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <!-- Custom Js -->
+    <script src="/repo/JS/stars.js"></script>
+    <script src="/repo/JS/year.js"></script>
+    <script src="/repo/JS/go_top.js"></script>
+    <script src="/repo/JS/dropzone.js"></script>
+    <script src="/repo/JS/colorScore.js"></script>
 </body>
     </html>
     <?php include "C:/xampp/htdocs/repo/go_top.php"?>

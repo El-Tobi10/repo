@@ -24,7 +24,7 @@
 	background-color: #FFCC33;
 }
 
-#game_area_metascore .score.low {
+#game_area_metascore .score .low {
 	background-color: #FF0000;
 }
 

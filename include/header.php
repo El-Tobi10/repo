@@ -47,15 +47,18 @@ session_start();?>
                         <li class="nav-item dropdown op">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Plataformas
+                                Desarrolladores
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">PC</a></li>
-                                <li><a class="dropdown-item" href="#">PS4</a></li>
-                                <li><a class="dropdown-item" href="#">PS5</a></li>
-                                <li><a class="dropdown-item" href="#">Xbox One</a></li>
-                                <li><a class="dropdown-item" href="#">Xbox Series X</a></li>
-                                <li><a class="dropdown-item" href="#">Switch</a></li>
+                                <?php
+                                    $sql = "SELECT DISTINCT desarrollador FROM juegos";
+                                    $result = mysqli_query($con, $sql);
+                                    
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        echo "<li><a class='dropdown-item' href='#'>". $row['desarrollador'] ."</a></li>";
+                                    }
+                                    
+                                ?>
                             </ul>
                         </li>
                         <li class="nav-item dropdown op">
@@ -64,21 +67,15 @@ session_start();?>
                                 Generos
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">2D</a></li>
-                                <li><a class="dropdown-item" href="#">Accion</a></li>
-                                <li><a class="dropdown-item" href="#">Aventura</a></li>
-                                <li><a class="dropdown-item" href="#">Carreras</a></li>
-                                <li><a class="dropdown-item" href="#">Deportes</a></li>
-                                <li><a class="dropdown-item" href="#">Estrategia</a></li>
-                                <li><a class="dropdown-item" href="#">Shooter</a></li>
-                                <li><a class="dropdown-item" href="#">Guerra</a></li>
-                                <li><a class="dropdown-item" href="#">Lucha</a></li>
-                                <li><a class="dropdown-item" href="#">Multijugador</a></li>
-                                <li><a class="dropdown-item" href="#">Mundo Abierto</a></li>
-                                <li><a class="dropdown-item" href="#">Rol</a></li>
-                                <li><a class="dropdown-item" href="#">Simulacion</a></li>
-                                <li><a class="dropdown-item" href="#">Supervivencia</a></li>
-                                <li><a class="dropdown-item" href="#">Terror</a></li>
+                            <?php
+                                    $sql = "SELECT genero FROM generos";
+                                    $result = mysqli_query($con, $sql);
+                                    
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        echo "<li><a class='dropdown-item' href='#'>". $row['genero'] ."</a></li>";
+                                    }
+                                    
+                                ?>
                             </ul>
                         </li>
 

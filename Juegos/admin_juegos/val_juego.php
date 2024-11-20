@@ -19,6 +19,9 @@ if(isset($_POST['aceptar'])){
     $steam = $_POST['steam'];
     $epic = $_POST['epic'];
     $xbox = $_POST['xbox'];
+    $precio_steam = $_POST['precio_steam'];
+    $precio_epic = $_POST['precio_epic'];
+    $precio_xbox = $_POST['precio_xbox'];
 
     // imagen de Portada
     if (!empty($_FILES['img_portada'])) {
@@ -41,46 +44,8 @@ if(isset($_POST['aceptar'])){
         echo "No se ha subido ninguna imagen.\n";
     }
 
-
     $descripcion = $_POST['descripcion'];
     $link_trailer = $_POST['trailer'];
-
-    // Capturas del Juego
-    // $nombre_capturas = [];
-    // var_dump($_FILES['cargarJuego[]']);
-    // if (!empty($_FILES['cargarJuego[]'])) {
-    //     print_r($_FILES['cargarJuego[]']);
-    //     $cap = $_FILES['cargarJuego[]'];
-    //     $cap_loc = $cap['tmp_name'];
-    //     $cap_name = $cap['name'];
-    //     $destino = $img_des . '/capturas';
-    //     if(!file_exists($destino)){
-    //         mkdir($destino);
-    //     }
-        
-    //     for ($i = 0; $i < count($cap_name); $i++) {
-    //         $cap_name = $cap['name'][$i];
-    //         $cap_loc = $cap['tmp_name'][$i]; 
-    //         if (move_uploaded_file($cap_loc, $destino .  "/" . basename($cap_name))) {
-
-    //             echo "Captura $cap_name subida con éxito.\n";
-    //             $nombre_capturas[] = $cap_name;
-    //         } else {
-    //             echo "Error al cargar la captura $cap_name.\n";
-    //         }
-    //     }
-        
-    //     if (move_uploaded_file($cap_loc, $destino)) {
-    //         echo "Capturas subidas con exito.\n";
-            
-    //     } else {
-    //         echo "Error al cargar capturas.\n";
-    //     }
-
-    // } else {
-    //     echo "No se ha subido ninguna captura.";
-    // }
-    // $total_cap = count($nombre_capturas);
 
     // Requisitos minimos
     $soMin = $_POST['so-min'];
@@ -112,45 +77,6 @@ if(isset($_POST['aceptar'])){
         $desarrollador = $_POST['otro-input'];
     }
 
-    // Ingreso Capturas
-    // if ($total_cap > 0) {
-    //     // $consulta = "INSERT INTO capturas (cap".$i.") VALUES ";
-    //     // for ($i = 0; $i < $total_cap; $i++) {
-    //     //     $consulta .= "('" . mysqli_real_escape_string($con, $nombre_capturas[$i]) . "')";
-    //     //     if ($i < $total_cap - 1) {
-    //     //         $consulta .= ",";
-    //     //     }
-    //     // }
-    //     // $ins_cap = mysqli_query($con, $consulta);
-    //     // if (!$ins_cap) {
-    //     //     die("Error en Capturas: " . mysqli_error($con));
-    //     // }
-    //     $stmt = $con->prepare("INSERT INTO capturas (cap1, cap2, cap3, cap4) VALUES (?, ?, ?, ?)");
-    //     if ($stmt === false) {
-    //         die("Error en la preparación de la consulta: " . $con->error);
-    //     }
-    //     $stmt->bind_param("ssss", $nombre_capturas[0], $nombre_capturas[1], $nombre_capturas[2], $nombre_capturas[3]);
-    //     if ($stmt->execute()) {
-    //         echo "Datos insertados correctamente.";
-    //     } else {
-    //         echo "Error al insertar datos: " . $stmt->error;
-    //     }
-
-    //     $stmt->close();
-    // }
-    // else{
-    //     die("Error al tomar las capturas.");
-    // }
-
-    // $id_cap = mysqli_query($con, "SELECT id_captura FROM capturas ORDER BY id_captura DESC LIMIT 1");
-    // $row = mysqli_fetch_assoc($id_cap);
-    // if($row > 0){
-    //     $id_cap = $row['id_captura'];
-    // }
-    // else{
-    //     die("Error en Capturas: " . mysqli_error($con));
-    // }
-    
     // Ingreso Metacritic
     $ins_metac = mysqli_query($con, "INSERT INTO metacritic(score, link) VALUES ('$score', '$link_meta')");
     if (!$ins_metac) {
@@ -166,7 +92,7 @@ if(isset($_POST['aceptar'])){
     }
 
     // Ingreso Links de compra
-    $links = mysqli_query($con, "INSERT INTO linkcompra (steam, epic, xbox) VALUES ('$steam', '$epic', '$xbox')");
+    $links = mysqli_query($con, "INSERT INTO linkcompra (steam, precio_steam, epic, precio_epic, xbox, precio_xbox) VALUES ('$steam','$precio_steam', '$epic', '$precio_epic', '$xbox', '$precio_xbox')");
     if (!$links) {
         die("Error en Metacritic: " . mysqli_error($con));
     }

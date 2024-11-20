@@ -1,6 +1,5 @@
 <?php include "C:/xampp/htdocs/repo/include/header.php"?>
 <?php
-    include "C:/xampp/htdocs/repo/conexion/conexion.php";
     if(!isset($_SESSION['admin']) && !isset($_SESSION['usuario'])){
         echo "<script language=javascript> location.href='/repo/login.php';</script>";
         die();
@@ -10,6 +9,11 @@
     $query = mysqli_query($con, "SELECT * FROM juegos WHERE id_juego = $id_juego");
     while($juego = mysqli_fetch_array($query)){
         $img_portada_dir = '/repo/img/juegos/' . pathinfo($juego['img_portada'], PATHINFO_FILENAME). '/capturas';
+        $query2 = mysqli_query($con, 
+        "SELECT metacritic.*, juegos.id_juego FROM metacritic 
+        INNER JOIN juegos ON metacritic.id_critic = juegos.id_critic 
+        WHERE juegos.id_juego = $id_juego;");
+        $metacritic = mysqli_fetch_assoc($query2);
     ?>
 <?php include "C:/xampp/htdocs/repo/Juegos/boton_editar.php"?>
 <title><?php echo $juego["titulo"];?> - BestGamer</title>
@@ -27,12 +31,12 @@
         </details>
         <div id="metacritic" class="d-flex flex-row-reverse">
             <div id="game_area_metascore">
-                <div class="score high">xx</div>
+                <div class="" id="score"><?php echo $metacritic["score"];?></div>
                 <div class="logo"></div>
                 <div class="wordmark">
                     <div class="metacritic">metacritic</div>
                     <div id="game_area_metalink">
-                        <a href="#" class="link-info"
+                        <a href="<?php echo $metacritic['link'];?>" class="link-info"
                             target="_blank">Leer las reseñas</a> <img
                             src="https://store.akamai.steamstatic.com/public/images/ico/iconExternalLink.gif">
                     </div>
@@ -109,11 +113,16 @@
         </div>
 <?php };?>
 
+<?php $query3 = mysqli_query($con, 
+        "SELECT linkcompra.*, juegos.id_juego FROM linkcompra 
+        INNER JOIN juegos ON linkcompra.id_links = juegos.id_links 
+        WHERE juegos.id_juego = $id_juego;");
+        $linkcompra = mysqli_fetch_assoc($query3);?>
 <div class="container">
     <h2 class="mt-4">Compralo aqui</h2>
     <div class="row">
         <div class="col compra steam ">
-            <a href="#" rel="nofollow noopener noreferrer"
+            <a href="<?php echo $linkcompra['steam']?>" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/steam.png"
@@ -123,14 +132,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $
+                            $<?php echo $linkcompra['precio_steam']?>
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra epic ">
-            <a href="#" rel="nofollow noopener noreferrer"
+            <a href="<?php echo $linkcompra['epic']?>" rel="nofollow noopener noreferrer"
                 target="_blank">
                 <div class="left">
                     <img class="logoCompra" src="/repo/img/logo_epic.svg"
@@ -140,14 +149,14 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $
+                            $<?php echo $linkcompra['precio_epic']?>
                         </div>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col compra micro">
-            <a href="#"
+            <a href="<?php echo $linkcompra['xbox']?>"
                 rel="nofollow noopener noreferrer" target="_blank">
                 <div class="left">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logoCompra" fill="currentColor" class="bi bi-xbox"
@@ -160,7 +169,7 @@
                 <div class="right">
                     <div class="container_precio">
                         <div class="precio">
-                            $
+                            $<?php echo $linkcompra['precio_xbox']?>
                         </div>
                     </div>
                 </div>
@@ -169,48 +178,58 @@
     </div>
 </div>
 
+<?php $query4 = mysqli_query($con, 
+        "SELECT requisitos_minimos.*, juegos.id_juego FROM requisitos_minimos 
+        INNER JOIN juegos ON requisitos_minimos.id_reqMin = juegos.id_reqMin 
+        WHERE juegos.id_juego = $id_juego;");
+        $requisitos_minimos = mysqli_fetch_assoc($query4);?>
 <div class="container">
     <h2 class="mt-4">Requisitos del sistema</h2>
     <h3 class="mt-2">Minimos</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"></span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"><?php echo $requisitos_minimos['so']?></span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;"></span>
+            <strong>Procesador: </strong><span style="font-size: inherit;"><?php echo $requisitos_minimos['proce']?></span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;"> GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;"><?php echo $requisitos_minimos['ram']?> GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"></span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"><?php echo $requisitos_minimos['video']?></span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"></span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"><?php echo $requisitos_minimos['audio']?></span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;"> GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;"><?php echo $requisitos_minimos['espacio']?> GB</span>
         </li>
     </ul>
+    <?php $query5 = mysqli_query($con, 
+        "SELECT requisitos_recomendados.*, juegos.id_juego FROM requisitos_recomendados 
+        INNER JOIN juegos ON requisitos_recomendados.id_reqRec = juegos.id_reqRec 
+        WHERE juegos.id_juego = $id_juego;");
+        $requisitos_recomendados = mysqli_fetch_assoc($query5);?>
     <h3 class="mt-2">Recomendados</h3>
     <ul>
         <li>
-            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"></span>
+            <strong>Sistema Operativo: </strong><span style="font-size: inherit;"><?php echo $requisitos_recomendados['so']?></span>
         </li>
         <li>
-            <strong>Procesador: </strong><span style="font-size: inherit;"></span>
+            <strong>Procesador: </strong><span style="font-size: inherit;"><?php echo $requisitos_recomendados['proce']?></span>
         </li>
         <li>
-            <strong>Memoria RAM: </strong><span style="font-size: inherit;"> GB</span>
+            <strong>Memoria RAM: </strong><span style="font-size: inherit;"><?php echo $requisitos_recomendados['ram']?> GB</span>
         </li>
         <li>
-            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"></span>
+            <strong>Tarjeta de Video: </strong><span style="font-size: inherit;"><?php echo $requisitos_recomendados['video']?></span>
         </li>
         <li>
-            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"></span>
+            <strong>Tarjeta de Sonido: </strong><span style="font-size: inherit;"><?php echo $requisitos_recomendados['audio']?></span>
         </li>
         <li>
-            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;"> GB</span>
+            <strong>Espacio de Almacenamiento: </strong><span style="font-size: inherit;"><?php echo $requisitos_recomendados['espacio']?> GB</span>
         </li>
     </ul>
 </div>
@@ -257,7 +276,6 @@
     </div>
 </div>
 </div>
-
 
 <?php include "C:/xampp/htdocs/repo/include/footer.php"; 
 }?>
