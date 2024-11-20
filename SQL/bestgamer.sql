@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2024 a las 04:49:13
+-- Tiempo de generación: 20-11-2024 a las 20:10:53
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -45,7 +45,8 @@ INSERT INTO `capturas` (`id_captura`, `cap1`, `cap2`, `cap3`, `cap4`, `id_juego`
 (2, 'ayudame.jpg', 'b33d6c0e88fbd11972c92c6953e6918f.jpg', 'Captura de pantalla 2024-03-23 011220.png', 'descarga.webp', 0),
 (3, 'Posible_Tatuaje.png', 'Posible_Tatuaje2.png', 'Ryan_Gosling.webp', 'Screenshot_20240126-134624-631.png', 0),
 (4, 'Screenshot_20240126-134624-631.png', 'SilvioMinecraft.jpeg', 'tomy fierro.jpeg', 'UltimaVision.jpg', 0),
-(5, 'LoUltimoDelOjoDerecho.png', 'Posible_Tatuaje.png', 'Posible_Tatuaje2.png', 'Ryan_Gosling.webp', 7);
+(5, 'LoUltimoDelOjoDerecho.png', 'Posible_Tatuaje.png', 'Posible_Tatuaje2.png', 'Ryan_Gosling.webp', 7),
+(6, 'cap1.jpg', 'cap2.jpg', 'cap3.jpg', 'cap4.jpg', 10);
 
 -- --------------------------------------------------------
 
@@ -126,19 +127,22 @@ INSERT INTO `juegos` (`id_juego`, `titulo`, `lanzamiento`, `desarrollador`, `img
 CREATE TABLE `linkcompra` (
   `id_links` int(11) NOT NULL,
   `steam` varchar(100) NOT NULL,
+  `precio_steam` float NOT NULL,
   `epic` varchar(100) NOT NULL,
-  `xbox` varchar(100) NOT NULL
+  `precio_epic` float NOT NULL,
+  `xbox` varchar(100) NOT NULL,
+  `precio_xbox` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `linkcompra`
 --
 
-INSERT INTO `linkcompra` (`id_links`, `steam`, `epic`, `xbox`) VALUES
-(1, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3'),
-(2, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3'),
-(3, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3'),
-(4, 'https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/', 'https://store.epicgames.com/es-ES/p/grand-theft-auto-v', 'https://www.xbox.com/es-ar/games/store/grand-theft-auto-v-edicion-premium/c496clvxmjp8');
+INSERT INTO `linkcompra` (`id_links`, `steam`, `precio_steam`, `epic`, `precio_epic`, `xbox`, `precio_xbox`) VALUES
+(1, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 0, 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 0, 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3', 0),
+(2, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 0, 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 0, 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3', 0),
+(3, 'https://store.steampowered.com/app/1144200/Ready_or_Not/', 0, 'https://store.epicgames.com/es-ES/p/the-coma-2b-catacomb-c3842a', 0, 'https://www.xbox.com/es-ar/games/store/the-bridge-curse-2-the-extrication/9NF5SCWM3MF3', 0),
+(4, 'https://store.steampowered.com/app/271590/Grand_Theft_Auto_V/', 39.98, 'https://store.epicgames.com/es-ES/p/grand-theft-auto-v', 29.99, 'https://www.xbox.com/es-ar/games/store/grand-theft-auto-v-edicion-premium/c496clvxmjp8', 29.99);
 
 -- --------------------------------------------------------
 
@@ -270,8 +274,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `mail`, `usuario`, `contrasenia`, `id_rol`) VALUES
-(1, 'tobias@123.com', 'daniel', '123', 2),
-(2, 'tobias@hotmail.com', 'el-tobi123', '123', 2),
+(2, 'tobias@hotmail.com', 'gaby', '123', 1),
 (3, 'agus@123.com', 'agusLame', 'si123', 2),
 (4, 'tobiasalfonso@outlook.com', 'El_Tobi10', '230110', 2),
 (8, 'tobias@bestgamer.com', 'Tobias_10', '1234', 1),
@@ -344,7 +347,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `capturas`
 --
 ALTER TABLE `capturas`
-  MODIFY `id_captura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_captura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `juegos`
