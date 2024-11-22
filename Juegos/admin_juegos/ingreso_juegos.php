@@ -177,21 +177,4 @@
         <button type="reset" class="btn btn-outline-danger">Cancelar</button>
     </div>
 </form>
-<script>
-$(document).ready(function() {
-    $('#cargarJuego').click(function() {
-        // Segunda función
-        $.ajax({
-            url: 'repo/crear_archivos.php', // Archivo para la segunda función
-            method: 'POST', // O 'GET' según lo que necesites
-            success: function(response) {
-                console.log('Función 1 ejecutada:', response);
-            },
-            error: function(xhr, status, error) {
-                console.error('Error en Función 1:', error);
-            }
-        });
-    });
-});
-</script>
 <?php include "C:/xampp/htdocs/repo/include/footer.php"?>

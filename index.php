@@ -6,27 +6,27 @@ $_SESSION['id_juego'] = null;
 <div class="gallery">
     <ul class="contenedor">
         <li class="card cartas from">
-            <a role="link" href="#" tabindex="0">
+            <a role="link" href="/repo/pag_juegos1.php?desarrollador=From+Software" tabindex="0">
                 <img src="/repo/img/Fromsoftware_logo.png" alt="">
             </a>
         </li>
         <li class="card cartas ubi">
-            <a role="link" href="#" tabindex="0">
+            <a role="link" href="/repo/pag_juegos1.php?desarrollador=Ubisoft" tabindex="0">
                 <img src="/repo/img/Ubisoft_logo.png" alt="">
             </a>
         </li>
         <li class="card cartas rock">
-            <a role="link" href="#" tabindex="0">
+            <a role="link" href="/repo/pag_juegos1.php?desarrollador=Rockstar+Games" tabindex="0">
                 <img src="/repo/img/logoRockstar.svg" alt="">
             </a>
         </li>
         <li class="card cartas beth">
-            <a role="link" href="#" tabindex="0">
+            <a role="link" href="/repo/pag_juegos1.php?desarrollador=Bethesda+Game+Studios" tabindex="0">
                 <img src="/repo/img/bgs-logo.png" alt="">
             </a>
         </li>
         <li class="card cartas dog">
-            <a role="link" href="#" tabindex="0">
+            <a role="link" href="/repo/pag_juegos1.php?desarrollador=Naughty+Dog" tabindex="0">
                 <img src="/repo/img/Naughty_Dog_logo.png" alt="">
             </a>
         </li>
@@ -42,7 +42,7 @@ $_SESSION['id_juego'] = null;
     <div class="row row-cols-1 row-cols-md-4 juegos">
         <div class="col">
             <div class="card juego">
-                <a href="/repo/Juegos/gtaV.php">
+                <a href="Juegos/mostrar_juego.php?id=11">
                     <img src="/repo/img/juegos/gtav/gtaV.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -52,7 +52,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="/repo/Juegos/skyrim.php">
+                <a href="Juegos/mostrar_juego.php?id=17">
                     <img src="/repo/img/juegos/skyrim/Skyrim.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -62,7 +62,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="../Juegos/RDR2.php">
+                <a href="Juegos/mostrar_juego.php?id=14">
                     <img src="/repo/img/juegos/RDR2/RDR2.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -72,7 +72,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="../Juegos/borderlands2.php">
+                <a href="Juegos/mostrar_juego.php?id=18">
                     <img src="/repo/img/juegos/Borderlands2/Borderlands2.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -84,7 +84,7 @@ $_SESSION['id_juego'] = null;
     <div class="row row-cols-1 row-cols-md-4 justify-content-center juegos">
         <div class="col">
             <div class="card juego">
-                <a href="../Juegos/cyberpunk.php">
+                <a href="Juegos/mostrar_juego.php?id=12">
                     <img src="/repo/img/juegos/cp2077/Cyberpunk-2077-portada.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -94,7 +94,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="#">
+                <a href="Juegos/mostrar_juego.php?id=19">
                     <img src="/repo/img/juegos/wukong/black-myth-wukong.png" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">
@@ -104,7 +104,7 @@ $_SESSION['id_juego'] = null;
         </div>
         <div class="col">
             <div class="card juego">
-                <a href="#">
+                <a href="Juegos/mostrar_juego.php?id=20">
                     <img src="/repo/img/juegos/elden/Elden_Ring_portada.jpg" class="card-img-top" alt="...">
                 </a>
                 <div class="card-body">

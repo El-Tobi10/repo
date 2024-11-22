@@ -29,15 +29,13 @@ if(isset($_POST['aceptar'])){
         $foto = $_FILES['img_portada'];
         $img_loc = $foto['tmp_name'];
         $img_name = $foto['name'];
-        $img_des = "C:/xampp/htdocs/repo/img/juegos/". pathinfo($img_name, PATHINFO_FILENAME);
+        $img_des = $_SERVER['DOCUMENT_ROOT'] . "/repo/img/juegos/". str_replace(" ", "-" , $titulo);
         if(!file_exists($img_des)){
             mkdir($img_des);
         }
         $mover_aca = $img_des . "/" . basename($img_name);
-        if(move_uploaded_file($img_loc, $mover_aca)) {
-            echo "Imagen cargada con exito.\n";
-            
-        } else {
+        $mover_img = move_uploaded_file($img_loc, $mover_aca);
+        if(!$mover_img) {
             echo "Error al cargar imagen.\n";
         }
     }else {
@@ -127,23 +125,17 @@ if(isset($_POST['aceptar'])){
     
     // Ingreso General de Juegos
     $insertar = mysqli_query($con, "INSERT INTO juegos (titulo, lanzamiento, desarrollador, img_portada, descripcion, generos, id_ReqMin, id_ReqRec, link_trailer, id_links, id_critic) VALUES ('$titulo', '$lanzamiento', '$desarrollador', '$img_name', '$descripcion','$generos', '$id_reqMin', '$id_reqRec', '$link_trailer', '$id_compra', '$id_meta')");
-
+    
     if (!$insertar) {
         die("Error al insertar el juego: " . mysqli_error($con));
+    } else{
+        echo '<script>
+                alert(" Juego cargado con Exito.");
+                window.location.href="/repo/pag_juegos1.php";
+            </script>';
     }
-    
-    echo '<script>
-            Swal.fire({
-                title: "Registro completado",
-                icon: "success",
-                confirmButtonText: "Aceptar",
-                confirmButtonColor: "#038dac",
-                allowOutsideClick: true
-            });
-        </script>';
-    header("Refresh: 2; url=/repo/pag_juegos1.php");
-}
-    else {
+
+} else { 
         echo '
             <script>
                 Swal.fire({
@@ -153,8 +145,9 @@ if(isset($_POST['aceptar'])){
                     confirmButtonText: "Aceptar",
                     confirmButtonColor: "#038dac",
                     allowOutsideClick: true
-                });
-                load();
+                }).then(() => {
+                            load();
+                        });
             </script>';
     }
 

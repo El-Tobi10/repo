@@ -20,7 +20,5 @@
     <button class="inicioSesion mt-3" id="uploadButton">Cargar Imágenes</button>
     <a href="/repo/Juegos/mostrar_Juego.php?id=<?php echo $id_juego?>"><button class="inicioSesion mt-3" type="button">Volver</button></a>
 
-    <h2>Imágenes Subidas</h2>
-    <div class="image-gallery" id="imageGallery"></div>
 </div>
 <?php include "C:/xampp/htdocs/repo/include/footer.php"?>

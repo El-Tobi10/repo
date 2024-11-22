@@ -8,20 +8,19 @@
     $_SESSION["id_juego"] = $id_juego;
     $query = mysqli_query($con, "SELECT * FROM juegos WHERE id_juego = $id_juego");
     while($juego = mysqli_fetch_array($query)){
-        $img_portada_dir = '/repo/img/juegos/' . pathinfo($juego['img_portada'], PATHINFO_FILENAME). '/capturas';
+        $img_portada_dir = '/repo/img/juegos/' . str_replace(" ", "-" , $juego['titulo']);
         $query2 = mysqli_query($con, 
         "SELECT metacritic.*, juegos.id_juego FROM metacritic 
         INNER JOIN juegos ON metacritic.id_critic = juegos.id_critic 
         WHERE juegos.id_juego = $id_juego;");
         $metacritic = mysqli_fetch_assoc($query2);
     ?>
-<?php include "C:/xampp/htdocs/repo/Juegos/boton_editar.php"?>
 <title><?php echo $juego["titulo"];?> - BestGamer</title>
 <link rel="stylesheet" href="/repo/CSS/juegos.css">
 <h1 class="text-center text-white"><?php echo $juego["titulo"];?></h1>
 
 <div class="container">
-    <img src="/repo/img/juegos/<?php echo pathinfo($juego['img_portada'], PATHINFO_FILENAME) . "/" . $juego['img_portada']?>" alt="" class="img-fluid min-100">
+    <img src="<?php echo $img_portada_dir . "/" . $juego['img_portada']?>" alt="imagen portada, <?php echo $juego["titulo"];?>" class="img-fluid min-100">
     <div class="bottom">
         <details>
             <summary>Detalles Generales</summary>
@@ -54,7 +53,11 @@
 
 <div class="container">
     <h2 class="mt-4">Gameplay/Trailer</h2>
-    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="<?php echo $juego["link_trailer"];?>"      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <?php 
+        // Aquí puedes definir el enlace que deseas usar
+        $enlace = isset($juego["link_trailer"]) ? $juego["link_trailer"] : "https://www.youtube.com/embed/CJaoHAlzZtI";
+    ?>
+    <iframe class="rounded mx-auto d-block" width="60%" height="425px" src="<?php echo htmlspecialchars($enlace); ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <?php 

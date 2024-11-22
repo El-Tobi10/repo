@@ -55,7 +55,7 @@ session_start();?>
                                     $result = mysqli_query($con, $sql);
                                     
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        echo "<li><a class='dropdown-item' href='#'>". $row['desarrollador'] ."</a></li>";
+                                        echo "<li><a class='dropdown-item' href='/repo/pag_juegos1.php?desarrollador=". urlencode($row['desarrollador']) ."'>". $row['desarrollador'] ."</a></li>";
                                     }
                                     
                                 ?>
@@ -67,12 +67,12 @@ session_start();?>
                                 Generos
                             </a>
                             <ul class="dropdown-menu">
-                            <?php
+                                <?php
                                     $sql = "SELECT genero FROM generos";
                                     $result = mysqli_query($con, $sql);
                                     
                                     while ($row = mysqli_fetch_assoc($result)) {
-                                        echo "<li><a class='dropdown-item' href='#'>". $row['genero'] ."</a></li>";
+                                        echo "<li><a class='dropdown-item' href='/repo/pag_juegos1.php?genero=". urlencode($row['genero']) ."'>". $row['genero'] ."</a></li>";
                                     }
                                     
                                 ?>
@@ -80,28 +80,32 @@ session_start();?>
                         </li>
 
                     </ul>
-                    <form class="d-flex search" role="search">
+                    <form class="d-flex search" role="search" method="get" action="/repo/pag_juegos1.php">
                         <div class="input-container">
-                            <input type="text" name="text" class="input" placeholder="Buscar...">
-                            <span class="icon">
-                                <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <path opacity="1" d="M14 5H20" stroke="#fff" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path opacity="1" d="M14 8H17" stroke="#fff" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                        <path
-                                            d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
-                                            stroke="#fff" stroke-width="2.5" stroke-linecap="round"
-                                            stroke-linejoin="round"></path>
-                                        <path opacity="1" d="M22 22L20 20" stroke="#fff" stroke-width="3.5"
-                                            stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </g>
-                                </svg>
-                            </span>
+                            <input type="text" name="text" class="input" placeholder="Buscar..."
+                                value="<?php echo isset($_GET['text']) ? htmlspecialchars($_GET['text']) : ''; ?>">
+                            <button type="submit" class="busqueda">
+                                <span class="icon">
+                                    <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path opacity="1" d="M14 5H20" stroke="#fff" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path opacity="1" d="M14 8H17" stroke="#fff" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
+                                                stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path opacity="1" d="M22 22L20 20" stroke="#fff" stroke-width="3.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </button>
                         </div>
                     </form>
                     <?php
@@ -124,10 +128,10 @@ session_start();?>
                         $stmt->close();
                         ?>
                     <a href="/repo/Juegos/admin_juegos/ingreso_juegos.php">
-                        <button class="inicioSesion mr-2"type="button">Ingresar Juego</button>
+                        <button class="inicioSesion mr-2" type="button">Ingresar Juego</button>
                     </a>
                     <a href="/repo/admin_usuarios.php">
-                        <button class="inicioSesion mr-2"type="button">Administrar Usuarios</button>
+                        <button class="inicioSesion mr-2" type="button">Administrar Usuarios</button>
                     </a>
 
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -138,7 +142,7 @@ session_start();?>
                             </a>";?>
                             <ul class="dropdown-menu ">
                                 <li><a href="/repo/login/edit.php" class="dropdown-item">Editar
-                                Nombre</a></li>
+                                        Nombre</a></li>
                                 <li><a href="/repo/login/logout.php" class="dropdown-item">Cerrar
                                         Sesión</a></li>
                             </ul>

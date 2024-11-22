@@ -15,12 +15,33 @@
     $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
     $offset = ($pagina - 1) * $limite;
 
-    // Consulta para obtener los juegos
-    $sql = "SELECT * FROM juegos LIMIT $limite OFFSET $offset";
-    $result = mysqli_query($con, $sql);
+    if (isset($_GET['text'])) {
+        $busqueda = $_GET['text'];
+        $sql = "SELECT * FROM juegos WHERE titulo LIKE '%$busqueda%' LIMIT $limite OFFSET $offset";
+        $result = mysqli_query($con, $sql);
 
+        $sql_total = "SELECT COUNT(*) as total FROM juegos WHERE titulo LIKE '%$busqueda%'";
+    } else if (isset($_GET['desarrollador'])){
+        $desarrollador = $_GET['desarrollador'];
+        $sql = "SELECT * FROM juegos WHERE desarrollador LIKE '%$desarrollador%' LIMIT $limite OFFSET $offset";
+        $result = mysqli_query($con, $sql);
+
+        $sql_total = "SELECT COUNT(*) as total FROM juegos WHERE desarrollador LIKE '%$desarrollador%'";
+    } else if(isset($_GET['genero'])){
+        $genero = $_GET['genero'];
+        $sql = "SELECT * FROM juegos WHERE generos LIKE '%$genero%' LIMIT $limite OFFSET $offset";
+        $result = mysqli_query($con, $sql);
+
+        $sql_total = "SELECT COUNT(*) as total FROM juegos WHERE generos LIKE '%$genero%'";
+    } else {
+        // Consulta para obtener los juegos
+        $sql = "SELECT * FROM juegos LIMIT $limite OFFSET $offset";
+        $result = mysqli_query($con, $sql);
+
+        $sql_total = "SELECT COUNT(*) as total FROM juegos";
+    }
+    
     // Consulta para contar el total de juegos
-    $sql_total = "SELECT COUNT(*) as total FROM juegos";
     $result_total = mysqli_query($con, $sql_total);
     $row_total = mysqli_fetch_assoc($result_total);
     $total_juegos = $row_total['total'];
@@ -30,6 +51,9 @@
 <table id="example" style="width:100%">
     <tbody>
         <?php
+        // if (empty(mysqli_fetch_assoc($result))) {
+        //     echo '<p class="text-center">No hay juegos disponibles dentro de esta busqueda.</p>';
+        // }
             $contador = 0;
             while ($row = mysqli_fetch_assoc($result)){
                 if ($contador % 3 == 0) {
@@ -40,7 +64,7 @@
                         <div class="col-4">
                             <div class="carta">
                                 <a href="/repo/Juegos/mostrar_juego.php?id='. $row['id_juego'] .'">
-                                    <img src="/repo/img/juegos/' . pathinfo($row["img_portada"], PATHINFO_FILENAME). '/' . $row["img_portada"] . '" alt="Portada de juego" class="img">
+                                    <img src="/repo/img/juegos/' . str_replace(" ", "-" , $row['titulo']). '/' . $row["img_portada"] . '" alt="Portada de juego" class="img">
                                     <div class="card__content">
                                         <p class="card__title">' . $row["titulo"] . '</p>
                                         <p class="card__description">'. $row["descripcion"] .'</p>

@@ -71,6 +71,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <!-- Dropzone js -->
+    <script src="/repo/JS/dropzone.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -82,7 +83,6 @@
     <script src="/repo/JS/stars.js"></script>
     <script src="/repo/JS/year.js"></script>
     <script src="/repo/JS/go_top.js"></script>
-    <script src="/repo/JS/dropzone.js"></script>
     <script src="/repo/JS/colorScore.js"></script>
 </body>
     </html>

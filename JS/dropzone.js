@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
         uploadMultiple: true,
         parallelUploads: 4,
         maxFiles: 4,
-        minFiles: 4,
         maxFilesize: 10,
         addRemoveLinks: true,
         acceptedFiles: "image/*",
@@ -39,12 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 myDropzone.processQueue();
             });
 
-            // Evento después de que todos los archivos hayan sido subidos exitosamente
-            this.on("queuecomplete", function() {
-                //  actualizar la galería de imágenes
-                fetchImages();
-            });
-
             //  eliminar un archivo antes de subirlo
             this.on("removedfile", function(file) {
                 // Puedes manejar lo que ocurre cuando se elimina un archivo de la zona de Dropzone
@@ -53,18 +46,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 })
-
-    // Función AJAX para actualizar la galería de imágenes
-    function fetchImages() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'ver_cap.php', true);
-        xhr.onload = function() {
-            if (this.status === 200) {
-                document.getElementById('imageGallery').innerHTML = this.responseText;
-            }
-        };
-        xhr.send();
-    }
-
-    // Cargar imágenes existentes al cargar la página
-    window.onload = fetchImages;

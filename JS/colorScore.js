@@ -3,13 +3,13 @@ $(document).ready(function() {
     // Limpiar clases anteriores
     $('#score').removeClass('high medium low');
 
-    if (numero >= 70) {
+    if (numero >= 75) {
         $('#score').addClass('score'); 
         $('#score').addClass('high'); // Clase para puntaje alto
-    } else if (numero < 70 && numero > 40) {
+    } else if (numero < 75 && numero > 45) {
         $('#score').addClass('score'); 
         $('#score').addClass('medium'); // Clase para puntaje medio
-    } else if (numero <= 40) {
+    } else if (numero <= 45) {
         $('#score').addClass('score'); 
         $('#score').addClass('low'); // Clase para puntaje bajo
     }
